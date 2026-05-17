@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "DSTALGO.StudyGroup/1.0.0": {
+        "runtime": {
+          "DSTALGO.StudyGroup.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DSTALGO.StudyGroup/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

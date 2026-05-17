@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\questions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\questions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Questions.json",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\Questions.json",
+              "RelativeDocumentMoniker": "DSTALGO.Quizzer\\Questions.json",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\Questions.json",
+              "RelativeToolTip": "DSTALGO.Quizzer\\Questions.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-17T23:46:15.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Quiz.cs",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\Quiz.cs",
+              "RelativeDocumentMoniker": "DSTALGO.Quizzer\\Quiz.cs",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\Quiz.cs",
+              "RelativeToolTip": "DSTALGO.Quizzer\\Quiz.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T23:45:47.36Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

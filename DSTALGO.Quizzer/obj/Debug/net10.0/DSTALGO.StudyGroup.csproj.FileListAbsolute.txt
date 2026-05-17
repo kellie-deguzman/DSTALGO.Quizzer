@@ -1,0 +1,15 @@
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\DSTALGO.StudyGroup.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\DSTALGO.StudyGroup.AssemblyInfoInputs.cache
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\DSTALGO.StudyGroup.AssemblyInfo.cs
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\DSTALGO.StudyGroup.csproj.CoreCompileInputs.cache
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\bin\Debug\net10.0\DSTALGO.StudyGroup.exe
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\bin\Debug\net10.0\DSTALGO.StudyGroup.deps.json
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\bin\Debug\net10.0\DSTALGO.StudyGroup.runtimeconfig.json
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\bin\Debug\net10.0\DSTALGO.StudyGroup.dll
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\bin\Debug\net10.0\DSTALGO.StudyGroup.pdb
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\DSTALGO.StudyGroup.dll
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\refint\DSTALGO.StudyGroup.dll
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\DSTALGO.StudyGroup.pdb
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\DSTALGO.StudyGroup.genruntimeconfig.cache
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\obj\Debug\net10.0\ref\DSTALGO.StudyGroup.dll
+C:\Users\winte\source\repos\DSTALGO.StudyGroup1\DSTALGO.StudyGroup\bin\Debug\net10.0\Questions.json

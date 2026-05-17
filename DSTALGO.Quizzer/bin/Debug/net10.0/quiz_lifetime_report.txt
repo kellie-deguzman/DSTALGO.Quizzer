@@ -1,0 +1,16 @@
+==================================================
+             LIFETIME MISTAKE REPORT              
+==================================================
+
+Question 1 - "Which Big O Notation describes worst case linear search?"
+Number of times wrong: 1
+Correct answer:        O(n)
+Wrong answers given:   [o(1)]
+--------------------------------------------------
+
+Question 2 - "Arrays can only hold elements of the same type, making them ________."
+Number of times wrong: 1
+Correct answer:        homogeneous
+Wrong answers given:   [analogous]
+--------------------------------------------------
+
