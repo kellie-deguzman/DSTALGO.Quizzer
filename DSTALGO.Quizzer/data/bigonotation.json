@@ -1,0 +1,127 @@
+[
+  {
+    "questionText": "What is the primary operational time complexity of finding the maximum value or checking for matching values inside an unsorted primitive array?",
+    "correctAnswer": "O(n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "Which Big O Notation describes best case linear search?",
+    "correctAnswer": "O(1)",
+    "explanation": ""
+  },
+  {
+    "questionText": "Which Big O Notation describes average case linear search?",
+    "correctAnswer": "O(n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "Which Big O Notation describes worst case linear search?",
+    "correctAnswer": "O(n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O notation of linear search?",
+    "correctAnswer": "O(n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O notation of binary search?",
+    "correctAnswer": "O(logn)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: for (int i = 0; i < n; i++) Console.WriteLine(i);",
+    "correctAnswer": "O(n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) x++;",
+    "correctAnswer": "O(n^2)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: for (int i = 1; i < n; i *= 2) Console.WriteLine(i);",
+    "correctAnswer": "O(log n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: while (n > 1) n /= 2;",
+    "correctAnswer": "O(log n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: int val = arr[0];",
+    "correctAnswer": "O(1)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: int sum = (n * (n + 1)) / 2;",
+    "correctAnswer": "O(1)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { Console.Write(j); } }",
+    "correctAnswer": "O(n^2)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O complexity of: int i = 0; while (i < n) { i++; }",
+    "correctAnswer": "O(n)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What notation describes the execution time or space requirements of an algorithm?",
+    "correctAnswer": "Big O",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is Big O notation primarily used to analyze and measure in algorithms?",
+    "correctAnswer": "Time and space complexity",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is time complexity?",
+    "correctAnswer": "How runtime grows",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is space complexity?",
+    "correctAnswer": "How much data will be processed",
+    "explanation": ""
+  },
+  {
+    "questionText": "What Big O notation represents an algorithm whose performance is always independent of the input data size?",
+    "correctAnswer": "O(1)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What Big O notation represents an algorithm whose processing tiem always stays the same?",
+    "correctAnswer": "O(1)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the time complexity of looking up an array element if its memory address is known?",
+    "correctAnswer": "O(1)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the Big O time complexity of accessing any single array element by index?",
+    "correctAnswer": "O(1)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What Big O notation describes logarithmic time complexity?",
+    "correctAnswer": "O(logN)",
+    "explanation": ""
+  },
+  {
+    "questionText": "What Big O notation represents an algorithm whose execution time grows quadratically with input size?",
+    "correctAnswer": "O(N^2)",
+    "explanation": ""
+  },
+  {
+    "questionText": "If an O(N^2) algorithm performs 100 operations for N=10, how many operations will it perform for N=20?",
+    "correctAnswer": "400",
+    "explanation": ""
+  }
+]

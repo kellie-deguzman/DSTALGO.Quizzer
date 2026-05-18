@@ -5,15 +5,140 @@ using System.Text.Json;
 
 namespace DSTALGO.StudyGroup
 {
+    public class QuizTopic
+    {
+        public string topicId { get; set; }
+        public string displayName { get; set; }
+        public string filePath { get; set; }
+        public int totalQuestions { get; set; }
+    }
+
     public class QuizSelect
     {
         public static void Main(string[] args)
         {
-            Quiz myQuiz = new Quiz();
+            List<QuizTopic> topics = new List<QuizTopic>();
+            var docOptions = new JsonDocumentOptions { AllowTrailingCommas = true };
 
-            Console.WriteLine("DSTALGO QUIZ 1 PRACTICE");
-            myQuiz.ShuffleQuestions();
-            myQuiz.QuizStart();
+            if (File.Exists("quiz-index.json"))
+            {
+                string indexJson = File.ReadAllText("quiz-index.json");
+                topics = JsonSerializer.Deserialize<List<QuizTopic>>(indexJson);
+
+                foreach (var topic in topics)
+                {
+                    if (File.Exists(topic.filePath))
+                    {
+                        string rawQuestions = File.ReadAllText(topic.filePath);
+                        using (JsonDocument doc = JsonDocument.Parse(rawQuestions, docOptions))
+                        {
+                            topic.totalQuestions = doc.RootElement.GetArrayLength();
+                        }
+                    }
+                }
+
+                // Programmatically sort topics to ensure requested ordering requirements:
+                // Basics -> First, Coding -> Second to last, Miscellaneous -> Dead last.
+                topics.Sort((x, y) =>
+                {
+                    int GetSortWeight(string id)
+                    {
+                        string cleanId = id.ToLower().Trim();
+                        if (cleanId.Contains("basics")) return 1;
+                        if (cleanId.Contains("coding")) return 98;
+                        if (cleanId.Contains("miscellaneous") || cleanId.Contains("misc")) return 99;
+                        return 50; // Standard items rest safely in the middle ground
+                    }
+                    ;
+
+                    int weightX = GetSortWeight(x.topicId);
+                    int weightY = GetSortWeight(y.topicId);
+
+                    if (weightX != weightY) return weightX.CompareTo(weightY);
+                    return string.Compare(x.displayName, y.displayName, StringComparison.OrdinalIgnoreCase);
+                });
+            }
+
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("==================================================");
+                Console.WriteLine("             DSTALGO QUIZ SYSTEM MENU             ");
+                Console.WriteLine("==================================================");
+
+                // Menu Width is exactly 50 characters to align flush against header borders
+                const int menuWidth = 50;
+
+                for (int i = 0; i < topics.Count; i++)
+                {
+                    string leftText = $"{i + 1}. {topics[i].displayName}";
+                    string rightText = $"({topics[i].totalQuestions} Qs)";
+                    int paddingNeeded = menuWidth - leftText.Length;
+
+                    if (paddingNeeded > rightText.Length)
+                    {
+                        Console.WriteLine($"{leftText}{rightText.PadLeft(paddingNeeded)}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{leftText} {rightText}");
+                    }
+                }
+
+                // Format the Master Combined Pool Option to be flush right
+                string mixLeft = $"{topics.Count + 1}. RANDOMIZED MIX";
+                string mixRight = "(All Topics Combined)";
+                int mixPadding = menuWidth - mixLeft.Length;
+
+                if (mixPadding > mixRight.Length)
+                {
+                    Console.WriteLine($"{mixLeft}{mixRight.PadLeft(mixPadding)}");
+                }
+                else
+                {
+                    Console.WriteLine($"{mixLeft} {mixRight}");
+                }
+
+                Console.WriteLine("Type 'exit' at any prompt to quit the application.");
+                Console.WriteLine("==================================================");
+                Console.Write("Select an option: ");
+
+                string selectionInput = Console.ReadLine();
+                if (selectionInput == null) return;
+
+                string menuCheck = selectionInput.Trim().ToLower();
+                if (menuCheck == "exit")
+                {
+                    break;
+                }
+
+                if (int.TryParse(selectionInput, out int choice) && choice > 0 && choice <= topics.Count + 1)
+                {
+                    Quiz myQuiz;
+
+                    if (choice == topics.Count + 1)
+                    {
+                        myQuiz = new Quiz(topics);
+                        Console.WriteLine("\nLoading combined dynamic pool...");
+                    }
+                    else
+                    {
+                        myQuiz = new Quiz(topics[choice - 1]);
+                        Console.WriteLine($"\nLoading {topics[choice - 1].displayName}...");
+                    }
+
+                    myQuiz.ShuffleQuestions();
+                    myQuiz.QuizStart();
+                    break;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid entry. Press any key to try again...");
+                    Console.ResetColor();
+                    Console.ReadKey();
+                }
+            }
         }
     }
 
@@ -43,21 +168,52 @@ namespace DSTALGO.StudyGroup
     {
         List<Question> question = new List<Question>();
         List<MistakeLog> mistakeReport = new List<MistakeLog>();
-        string rawText = "";
         string hiddenJsonPath = "quiz_lifetime_stats.json";
+        private JsonSerializerOptions options;
 
-        public Quiz()
+        private void InitializeOptions()
         {
-            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            string filePath = "questions.json";
-            rawText = File.ReadAllText(filePath);
-            question = JsonSerializer.Deserialize<List<Question>>(rawText, options);
+            options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+                AllowTrailingCommas = true
+            };
+        }
+
+        // Constructor for Single Topic Execution
+        public Quiz(QuizTopic targetTopic)
+        {
+            InitializeOptions();
+
+            if (File.Exists(targetTopic.filePath))
+            {
+                string rawText = File.ReadAllText(targetTopic.filePath);
+                question = JsonSerializer.Deserialize<List<Question>>(rawText, options) ?? new List<Question>();
+            }
+        }
+
+        // Constructor for Unified Global Mixed Pool Execution
+        public Quiz(List<QuizTopic> allTopics)
+        {
+            InitializeOptions();
+
+            foreach (var topic in allTopics)
+            {
+                if (File.Exists(topic.filePath))
+                {
+                    string rawText = File.ReadAllText(topic.filePath);
+                    var subList = JsonSerializer.Deserialize<List<Question>>(rawText, options);
+                    if (subList != null)
+                    {
+                        question.AddRange(subList);
+                    }
+                }
+            }
         }
 
         public void ShuffleQuestions()
         {
             Random rd = new Random();
-
             for (int i = 0; i < question.Count; i++)
             {
                 int randomIndex = rd.Next(0, question.Count);
@@ -70,71 +226,64 @@ namespace DSTALGO.StudyGroup
         public void QuizStart()
         {
             int correctCount = 0;
-            // === ADDED: Track how many questions were actually answered before exiting ===
             int questionsAttempted = 0;
             mistakeReport.Clear();
 
             foreach (Question q in question)
             {
                 Console.Clear();
-
                 Console.WriteLine($"{q.questionText}");
                 Console.Write("\n> ");
 
                 string userInput = Console.ReadLine();
+                if (userInput == null) continue;
 
-                if (userInput != null)
+                string cleanInput = userInput.Trim().ToLower();
+
+                if (cleanInput == "exit")
                 {
-                    // Clean the input to check for the exit command
-                    string cleanInput = userInput.Trim().ToLower();
-
-                    // === NEW: INSTANT EXIT CHECK ===
-                    if (cleanInput == "exit")
-                    {
-                        break; // Immediately drops out of the foreach loop!
-                    }
-                    // ===============================
-
-                    questionsAttempted++; // Increment because they submitted a real answer
-                    string cleanAnswer = q.correctAnswer.Trim().ToLower();
-
-                    if (cleanInput == cleanAnswer)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\nCORRECT!");
-                        Console.ResetColor();
-                        correctCount++;
-                    }
-                    else
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("\nINCORRECT!");
-                        Console.ResetColor();
-                        Console.WriteLine($"The correct answer is: {q.correctAnswer}");
-
-                        MistakeLog log = new MistakeLog();
-                        log.QuestionText = q.questionText;
-                        log.UserAnswer = userInput;
-                        log.CorrectAnswer = q.correctAnswer;
-
-                        mistakeReport.Add(log);
-                    }
-
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("\nEXPLANATION:");
-                    Console.ResetColor();
-                    Console.WriteLine(q.explanation);
-
-                    Console.WriteLine("\nPress any key to continue...");
-                    Console.ReadKey();
+                    break;
                 }
+
+                questionsAttempted++;
+                string cleanAnswer = q.correctAnswer.Trim().ToLower();
+
+                if (cleanInput == cleanAnswer)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\nCORRECT!");
+                    Console.ResetColor();
+                    correctCount++;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\nINCORRECT!");
+                    Console.ResetColor();
+                    Console.WriteLine($"The correct answer is: {q.correctAnswer}");
+
+                    MistakeLog log = new MistakeLog
+                    {
+                        QuestionText = q.questionText,
+                        UserAnswer = userInput,
+                        CorrectAnswer = q.correctAnswer
+                    };
+                    mistakeReport.Add(log);
+                }
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("\nEXPLANATION:");
+                Console.ResetColor();
+                Console.WriteLine(q.explanation);
+
+                Console.WriteLine("\nPress any key to continue (or type 'exit' at next question pointer)...");
+                Console.ReadKey();
             }
 
             Console.Clear();
             Console.WriteLine("==================================================");
-            Console.WriteLine("                QUIZ COMPLETE!                    ");
+            Console.WriteLine("                 QUIZ COMPLETE!                   ");
             Console.WriteLine("==================================================");
-            // === CHANGED: Score dynamically scales based on questions attempted vs total database size ===
             Console.WriteLine($" Your final score: ({correctCount}/{questionsAttempted})  [Total pool size: {question.Count}]");
             Console.WriteLine("==================================================\n");
 
@@ -143,7 +292,6 @@ namespace DSTALGO.StudyGroup
             if (mistakeReport.Count > 0)
             {
                 Console.WriteLine("REVIEW YOUR INCORRECT ANSWERS FROM THIS RUN:\n");
-
                 for (int i = 0; i < mistakeReport.Count; i++)
                 {
                     MistakeLog m = mistakeReport[i];
@@ -159,7 +307,7 @@ namespace DSTALGO.StudyGroup
             else if (questionsAttempted > 0)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("No mistakes made in this session! ");
+                Console.WriteLine("No mistakes made in this session! 😎");
                 Console.ResetColor();
             }
             else
@@ -176,7 +324,7 @@ namespace DSTALGO.StudyGroup
             try
             {
                 List<LifetimeStat> lifetimeDatabase = new List<LifetimeStat>();
-                var jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+                var jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true, AllowTrailingCommas = true };
 
                 if (File.Exists(hiddenJsonPath))
                 {
@@ -216,28 +364,24 @@ namespace DSTALGO.StudyGroup
                 File.WriteAllText(hiddenJsonPath, updatedJson);
 
                 System.Text.StringBuilder reportBuilder = new System.Text.StringBuilder();
-
                 reportBuilder.AppendLine("==================================================");
-                reportBuilder.AppendLine("             LIFETIME MISTAKE REPORT              ");
+                reportBuilder.AppendLine("                 MISTAKES REPORT                  ");
                 reportBuilder.AppendLine("==================================================");
                 reportBuilder.AppendLine();
 
                 for (int i = 0; i < lifetimeDatabase.Count; i++)
                 {
                     LifetimeStat stat = lifetimeDatabase[i];
-
                     reportBuilder.AppendLine($"Question {i + 1} - \"{stat.QuestionText}\"");
                     reportBuilder.AppendLine($"Number of times wrong: {stat.TimesWrong}");
                     reportBuilder.AppendLine($"Correct answer:        {stat.CorrectAnswer}");
-
                     string wrongAnswersJoined = string.Join(", ", stat.WrongAnswers);
                     reportBuilder.AppendLine($"Wrong answers given:   [{wrongAnswersJoined}]");
-
                     reportBuilder.AppendLine(new string('-', 50));
                     reportBuilder.AppendLine();
                 }
 
-                File.WriteAllText("quiz_lifetime_report.txt", reportBuilder.ToString());
+                File.WriteAllText("mistakes_report.txt", reportBuilder.ToString());
             }
             catch (Exception ex)
             {

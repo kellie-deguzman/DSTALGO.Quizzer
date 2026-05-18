@@ -1,0 +1,58 @@
+[
+  {
+    "questionText": "What does linear search do?",
+    "correctAnswer": "Searches through every element 1 by 1",
+    "explanation": ""
+  },
+  {
+    "questionText": "What does binary search do?",
+    "correctAnswer": "Searches in middle then left and right based on result",
+    "explanation": ""
+  },
+  {
+    "questionText": "What type of search checks each element of an array sequentially from start to finish?",
+    "correctAnswer": "Linear",
+    "explanation": ""
+  },
+  {
+    "questionText": "What type of datasets is linear search primarily used for because it requires no structural prerequisite?",
+    "correctAnswer": "Unsorted",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the worst-case number of comparisons for a linear search on an array of size N?",
+    "correctAnswer": "N",
+    "explanation": ""
+  },
+  {
+    "questionText": "What search algorithm repeatedly divides a sorted search interval in half to locate an element?",
+    "correctAnswer": "Binary",
+    "explanation": ""
+  },
+  {
+    "questionText": "What specific prerequisite condition must a dataset meet before binary search can be used?",
+    "correctAnswer": "Sorted",
+    "explanation": ""
+  },
+  {
+    "questionText": "What technique does binary search use to divide the search space in half during each step?",
+    "correctAnswer": "Divide and conquer",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the main operational difference between binary and linear search regarding how they eliminate search space elements?",
+    "correctAnswer": "Halving",
+    "explanation": ""
+  },
+  {
+    "questionText": "What mathematical formula is commonly used to find the midpoint index given a low index L and a high index H?",
+    "correctAnswer": "(L+H)/2",
+    "explanation": ""
+  },
+  {
+    "questionText": "If an array contains 1024 elements, what is the maximum number of comparisons a binary search requires?",
+    "correctAnswer": "10",
+    "explanation": ""
+  }
+
+]

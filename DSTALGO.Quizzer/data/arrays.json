@@ -1,0 +1,153 @@
+[
+  {
+    "questionText": "What is an array?",
+    "correctAnswer": "A row of numbered boxes",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is a 1D array?",
+    "correctAnswer": "A collection of homogeneous elements stored in contiguous memory locations",
+    "explanation": ""
+  },
+  {
+    "questionText": "[T/F] An array is a flexible list of numbers.",
+    "correctAnswer": "False",
+    "explanation": ""
+  },
+  {
+    "questionText": "True or false: an array's size can be increased at runtime by appending more elements.",
+    "correctAnswer": "False",
+    "explanation": ""
+  },
+  {
+    "questionText": "Arrays can only hold elements of the same type, making them **.",
+    "correctAnswer": "homogeneous",
+    "explanation": ""
+  },
+  {
+    "questionText": "** matters in all arrays because elements are stored sequentially and accessed via zero-based indices.",
+    "correctAnswer": "position",
+    "explanation": ""
+  },
+  {
+    "questionText": "Arrays live in ________ memory.",
+    "correctAnswer": "contiguous",
+    "explanation": ""
+  },
+  {
+    "questionText": "What indexing system do arrays use to reference elements?",
+    "correctAnswer": "Zero-based",
+    "explanation": ""
+  },
+  {
+    "questionText": "What type of data structure is linear and continuous?",
+    "correctAnswer": "Array",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is always the first index of an array?",
+    "correctAnswer": "0",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is always the last index of an array?",
+    "correctAnswer": "length - 1",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the last valid index of an array with a Length of 8?",
+    "correctAnswer": "7",
+    "explanation": ""
+  },
+  {
+    "questionText": "What C# keyword or property returns the total number of slots in an array without parentheses?",
+    "correctAnswer": "Length",
+    "explanation": ""
+  },
+  {
+    "questionText": "What does a.Length return for int[] a = { 5, 10 };?",
+    "correctAnswer": "2",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the address formula to find an array element?",
+    "correctAnswer": "address = base + index * elementSize",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is the target memory address for arr[5] if the base address is 2000 and each integer element takes exactly 4 bytes?",
+    "correctAnswer": "2020",
+    "explanation": ""
+  },
+  {
+    "questionText": "Declare the array of grades { 8, 9, 11, 2 } with defined values.",
+    "correctAnswer": "int[] grades = { 8, 9, 11, 2 };",
+    "explanation": ""
+  },
+  {
+    "questionText": "Declare the array of grades { 8, 9, 11, 2 } with a defined size.",
+    "correctAnswer": "int[] grades = new int[4];",
+    "explanation": ""
+  },
+  {
+    "questionText": "Declare the array of names Jack, Mark, Felix with size and assign. (only the first name)",
+    "correctAnswer": "string[] names = new string[3]; names[0] = \"Jack\";",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] a = { 85, 92, 78, 90 };, access index 3 and store in integer variable x.",
+    "correctAnswer": "int x = a[3];",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] a = { 85, 92, 78, 90 };, modify index 2 and input 1 into its position.",
+    "correctAnswer": "a[3] = 1;",
+    "explanation": ""
+  },
+  {
+    "questionText": "a.Length - 1 implies that array length is always ________.",
+    "correctAnswer": "1 past the last array",
+    "explanation": ""
+  },
+  {
+    "questionText": "Using standard array allocation syntax, write the minimal declaration statement for a fresh integer array containing 10 slots filled with zeros.",
+    "correctAnswer": "int[] arr = new int[10];",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] a = { 5, 10, 15, 20 }; what is a[2]?",
+    "correctAnswer": "15",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] a = { 5, 10, 15, 20 }; what happens when you run a[4]?",
+    "correctAnswer": "IndexOutOfRangeException",
+    "explanation": ""
+  },
+  {
+    "questionText": "What specific exception is thrown when attempting to read an index equal to an array's Length?",
+    "correctAnswer": "IndexOutOfRangeException",
+    "explanation": ""
+  },
+  {
+    "questionText": "Which specific comparison operator used in a for loop condition causes a classic off-by-one error when running up to an array's Length?",
+    "correctAnswer": "<=",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] a = { 5, 10, 15, 20 }; how many iterations does for (int i = 0; i < a.Length; i++) run?",
+    "correctAnswer": "4",
+    "explanation": ""
+  },
+  {
+    "questionText": "What integer value is tracked and accumulated when implementing the classic array loop sum pattern?",
+    "correctAnswer": "total",
+    "explanation": ""
+  },
+  {
+    "questionText": "What specific alternative C# iteration keyword simplifies code when you want to read every array element sequentially without using indices?",
+    "correctAnswer": "foreach",
+    "explanation": ""
+  }
+
+]

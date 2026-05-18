@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "DSTALGO.StudyGroup/1.0.0": {
+      "DSTALGO.Quizzer/1.0.0": {
         "runtime": {
-          "DSTALGO.StudyGroup.dll": {}
+          "DSTALGO.Quizzer.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "DSTALGO.StudyGroup/1.0.0": {
+    "DSTALGO.Quizzer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

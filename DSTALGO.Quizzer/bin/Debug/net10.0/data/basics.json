@@ -1,0 +1,57 @@
+[
+  {
+    "questionText": "Algorithms are ________ that ________ or ________.",
+    "correctAnswer": "instructions or rules that solve a problem or perform a task",
+    "explanation": ""
+  },
+  {
+    "questionText": "Data structures are a way of ________ and ________ for ________",
+    "correctAnswer": "a way of organizing and storing data for efficient access and modification",
+    "explanation": ""
+  },
+  {
+    "questionText": "How are algorithms and data structures connected?",
+    "correctAnswer": "Algorithms use data structures to manage and process info",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is sorting in computer science?",
+    "correctAnswer": "Arranging data in order",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is searching in computer science?",
+    "correctAnswer": "Finding an element in a collection of data",
+    "explanation": ""
+  },
+  {
+    "questionText": "Linked lists live in ________ memory.",
+    "correctAnswer": "non-contiguous",
+    "explanation": ""
+  },
+  {
+    "questionText": "Contiguous memory is when ________.",
+    "correctAnswer": "Data is stored in one block",
+    "explanation": ""
+  },
+  {
+    "questionText": "Non-contiguous memory is when ________.",
+    "correctAnswer": "Data is scattered",
+    "explanation": ""
+  },
+  {
+    "questionText": "A linked list is ________ pointing to ________.",
+    "correctAnswer": "A collection of elements pointing to the next",
+    "explanation": ""
+  },
+  {
+    "questionText": "What type of linear data structure is easy to update?",
+    "correctAnswer": "Linked list",
+    "explanation": ""
+  },
+  {
+    "questionText": "What type of linear data structure is slow to update and why? (data structure, reason)",
+    "correctAnswer": "Array, fixed",
+    "explanation": ""
+  }
+]

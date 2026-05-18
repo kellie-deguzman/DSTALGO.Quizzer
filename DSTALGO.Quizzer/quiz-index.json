@@ -1,0 +1,32 @@
+[
+  {
+    "topicId": "arrays",
+    "displayName": "Arrays",
+    "filePath": "data/arrays.json"
+  },
+  {
+    "topicId": "basics",
+    "displayName": "DSTALGO Basics",
+    "filePath": "data/basics.json"
+  },
+  {
+    "topicId": "bigonotation",
+    "displayName": "Big O Notation",
+    "filePath": "data/bigonotation.json"
+  },
+  {
+    "topicId": "coding",
+    "displayName": "Coding",
+    "filePath": "data/coding.json"
+  },
+  {
+    "topicId": "misc",
+    "displayName": "Miscellaneous",
+    "filePath": "data/misc.json"
+  },
+  {
+    "topicId": "search",
+    "displayName": "Linear & Binary Search",
+    "filePath": "data/search.json"
+  }
+]

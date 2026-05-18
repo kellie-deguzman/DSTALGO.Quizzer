@@ -1,0 +1,47 @@
+[
+  {
+    "questionText": "Given int[] age = new int[2] { 3, 5 };, swap both ages around. (3 lines of code)",
+    "correctAnswer": "int temp = age[0]; age[0] = age[1]; age[1] = temp;",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum. (4 lines of code)",
+    "correctAnswer": "foreach (int i in age) { sum = sum + i; }",
+    "explanation": ""
+  },
+  {
+    "questionText": "What's a shorter way of writing sum = sum + i;?",
+    "correctAnswer": "sum += age[i];",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, print the average. (1 line of code)",
+    "correctAnswer": "Console.WriteLine((double)sum/age.Length);",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the average. (1 line of code)",
+    "correctAnswer": "double average = (double)sum / age.Length;",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest. (7 lines of code)",
+    "correctAnswer": "foreach (int i in age) { if (i > highest) { highest = i } }",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest. (7 lines of code)",
+    "correctAnswer": "foreach (int i in age) { if (i > highest) { highest = i } }",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum of odd/even numbers. (10 lines of code)",
+    "correctAnswer": "foreach (int i in age) { if (i % 2 == 0) { sumEven = sumEven + i; } else { sumOdd = sumOdd + i; }",
+    "explanation": ""
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest of odd/even numbers. (10 lines of code)",
+    "correctAnswer": "foreach (int i in age) { if (i % 2 == 0) { if (i > highestEven) highestEven = i; } else { if (i > highestOdd) highestOdd = i; }",
+    "explanation": ""
+  }
+]

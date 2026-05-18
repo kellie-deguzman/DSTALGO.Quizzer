@@ -1,0 +1,52 @@
+[
+  {
+    "questionText": "Describe the flow of a for loop in terms of how a computer would read it. (7 steps)",
+    "correctAnswer": "declaration of counter, assignment, condition check, runs internal code if true, increments, condition check, repeat",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is a for loop used for?",
+    "correctAnswer": "To access values via index",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is a foreach loop used for?",
+    "correctAnswer": "To reference values directly",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is a while loop used for?",
+    "correctAnswer": "To loop an unknown number of times, checking condition before each loop",
+    "explanation": ""
+  },
+  {
+    "questionText": "What is a do-while loop used for?",
+    "correctAnswer": "To execute code at least once",
+    "explanation": ""
+  },
+  {
+    "questionText": "A single equals sign (=) performs ________.",
+    "correctAnswer": "Assignment",
+    "explanation": ""
+  },
+  {
+    "questionText": "A double equals sign (==)  ________.",
+    "correctAnswer": "Asks yes/no",
+    "explanation": ""
+  },
+  {
+    "questionText": "5 % 2 = ?",
+    "correctAnswer": "1",
+    "explanation": "Because 2 fits into 5 twice, totalling 4"
+  },
+  {
+    "questionText": "5 % 3 = ?",
+    "correctAnswer": "2",
+    "explanation": "Because 3 fits into 5 once, totalling 3"
+  },
+  {
+    "questionText": "21 % 7 = ?",
+    "correctAnswer": "0",
+    "explanation": "Because 7 fits into 21 thrice, totalling 21"
+  }
+]
