@@ -21,9 +21,9 @@ Wrong answers given:   [memory is stored in blocks]
 --------------------------------------------------
 
 Question 4 - "How are algorithms and data structures connected?"
-Number of times wrong: 5
+Number of times wrong: 6
 Correct answer:        Algorithms use data structures to manage and process info
-Wrong answers given:   [data structures provide organized data for algorithms, algorithms use data structures]
+Wrong answers given:   [data structures provide organized data for algorithms, algorithms use data structures, algorithms use data structures to access and modify data]
 --------------------------------------------------
 
 Question 5 - "Data structures are a way of ________ and ________ for ________"
@@ -69,15 +69,15 @@ Wrong answers given:   [zero-base]
 --------------------------------------------------
 
 Question 12 - "What is a 1D array?"
-Number of times wrong: 1
+Number of times wrong: 2
 Correct answer:        A collection of homogeneous elements stored in contiguous memory locations
 Wrong answers given:   []
 --------------------------------------------------
 
 Question 13 - "Given int[] a = { 85, 92, 78, 90 };, modify index 2 and input 1 into its position."
-Number of times wrong: 1
+Number of times wrong: 2
 Correct answer:        a[3] = 1;
-Wrong answers given:   [a[2] = 1]
+Wrong answers given:   [a[2] = 1, int[2] = 1;]
 --------------------------------------------------
 
 Question 14 - "Declare the array of grades { 8, 9, 11, 2 } with a defined size."
@@ -86,9 +86,214 @@ Correct answer:        int[] grades = new int[4];
 Wrong answers given:   [int[] grades = { 8, 9, 11, 2 };]
 --------------------------------------------------
 
-Question 15 - "Given int[] a = { 85, 92, 78, 90 };, access index 3 and store in integer variable x."
+Question 15 - "Given int[] a = { 85, 92, 78, 90 };, access index 3 and store 
+in integer variable x."
 Number of times wrong: 1
 Correct answer:        int x = a[3];
 Wrong answers given:   [int x = arr[3];]
+--------------------------------------------------
+
+Question 16 - "What is space complexity?"
+Number of times wrong: 1
+Correct answer:        How much data will be processed
+Wrong answers given:   [how much data is being processed]
+--------------------------------------------------
+
+Question 17 - "What notation describes the execution time or space requirements of an algorithm?"
+Number of times wrong: 1
+Correct answer:        Big O
+Wrong answers given:   [big o notation]
+--------------------------------------------------
+
+Question 18 - "What is the Big O complexity of: for (int i = 1; i < n; i *= 2) Console.WriteLine(i);"
+Number of times wrong: 2
+Correct answer:        O(log n)
+Wrong answers given:   [o(n)]
+--------------------------------------------------
+
+Question 19 - "What is the Big O complexity of: int sum = (n * (n + 1)) / 2;"
+Number of times wrong: 1
+Correct answer:        O(1)
+Wrong answers given:   [o(n)]
+--------------------------------------------------
+
+Question 20 - "What is the Big O complexity of: while (n > 1) n /= 2;"
+Number of times wrong: 1
+Correct answer:        O(log n)
+Wrong answers given:   [o(logn)]
+--------------------------------------------------
+
+Question 21 - "What is the Big O notation of binary search?"
+Number of times wrong: 2
+Correct answer:        O(logn)
+Wrong answers given:   [o(log n)]
+--------------------------------------------------
+
+Question 22 - "What type of search checks each element of an array sequentially from start to finish?"
+Number of times wrong: 1
+Correct answer:        Linear
+Wrong answers given:   [linear search]
+--------------------------------------------------
+
+Question 23 - "What mathematical formula is commonly used to find the midpoint index given a low index L and a high index H?"
+Number of times wrong: 1
+Correct answer:        (L+H)/2
+Wrong answers given:   [(l + h)]
+--------------------------------------------------
+
+Question 24 - "What does binary search do?"
+Number of times wrong: 2
+Correct answer:        Searches in middle then left and right based on result
+Wrong answers given:   [finds middle, searches in left or right based on result, searches the middle then left and right based on result]
+--------------------------------------------------
+
+Question 25 - "What does linear search do?"
+Number of times wrong: 2
+Correct answer:        Searches through every element 1 by 1
+Wrong answers given:   [searches 1 by 1]
+--------------------------------------------------
+
+Question 26 - "What technique does binary search use to divide the search space in half during each step?"
+Number of times wrong: 1
+Correct answer:        Divide and conquer
+Wrong answers given:   [modulo division]
+--------------------------------------------------
+
+Question 27 - "If an array contains 1024 elements, what is the maximum number of comparisons a binary search requires?"
+Number of times wrong: 1
+Correct answer:        10
+Wrong answers given:   [2048]
+--------------------------------------------------
+
+Question 28 - "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest. (7 lines of code)"
+Number of times wrong: 4
+Correct answer:        foreach (int i in age) { if (i > highest) { highest = i } }
+Wrong answers given:   [foreach, foreach (int i in age) { if (i > highest) highest = i; }]
+--------------------------------------------------
+
+Question 29 - "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the average. (1 line of code)"
+Number of times wrong: 2
+Correct answer:        double average = (double)sum / age.Length;
+Wrong answers given:   [Console.Write, double average = (double)sum/age.Length;]
+--------------------------------------------------
+
+Question 30 - "Given int[] age = new int[2] { 3, 5 };, swap both ages around. (3 lines of code)"
+Number of times wrong: 2
+Correct answer:        int temp = age[0]; age[0] = age[1]; age[1] = temp;
+Wrong answers given:   [temp = int[0]; int[0] = int[1]; int[1] = temp;, temp = age[0]; age[0] = age[1]; age[1] = temp;]
+--------------------------------------------------
+
+Question 31 - "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum of odd/even numbers. (10 lines of code)"
+Number of times wrong: 2
+Correct answer:        foreach (int i in age) { if (i % 2 == 0) { sumEven = sumEven + i; } else { sumOdd = sumOdd + i; }
+Wrong answers given:   [for (int]
+--------------------------------------------------
+
+Question 32 - "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest of odd/even numbers. (10 lines of code)"
+Number of times wrong: 2
+Correct answer:        foreach (int i in age) { if (i % 2 == 0) { if (i > highestEven) highestEven = i; } else { if (i > highestOdd) highestOdd = i; }
+Wrong answers given:   [foreach (int i in age) { if (i % 2 == 0) { if (i > highestEven) i = highestEven } else { if (i > highestOdd) i = highestOdd } , foreach (int i in age) { if (i % 2 == 0) { if (i > highestEven) { highestEven = i; } } else { if (i > highestOdd) { highestOdd = i; }]
+--------------------------------------------------
+
+Question 33 - "What's a shorter way of writing sum = sum + i;?"
+Number of times wrong: 2
+Correct answer:        sum += age[i];
+Wrong answers given:   [sum += i;]
+--------------------------------------------------
+
+Question 34 - "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum. (4 lines of code)"
+Number of times wrong: 2
+Correct answer:        foreach (int i in age) { sum = sum + i; }
+Wrong answers given:   [foreach (int i in age) { sum = sum + age[i]; }, foreach (int i in age) { if (i > sum) { sum = sum + i; } }]
+--------------------------------------------------
+
+Question 35 - "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, print the average. (1 line of code)"
+Number of times wrong: 1
+Correct answer:        Console.WriteLine((double)sum/age.Length);
+Wrong answers given:   [Console.WriteLine(sum/age.Length);]
+--------------------------------------------------
+
+Question 36 - "What is a foreach loop used for?"
+Number of times wrong: 2
+Correct answer:        To reference values directly
+Wrong answers given:   []
+--------------------------------------------------
+
+Question 37 - "What is a while loop used for?"
+Number of times wrong: 2
+Correct answer:        To loop an unknown number of times, checking condition before each loop
+Wrong answers given:   [to , to run an unknown number of loops, checks conditions after each loop]
+--------------------------------------------------
+
+Question 38 - "A double equals sign (==)  ________."
+Number of times wrong: 1
+Correct answer:        Asks yes/no
+Wrong answers given:   [checks if yes/no]
+--------------------------------------------------
+
+Question 39 - "Describe the flow of a for loop in terms of how a computer would read it. (7 steps)"
+Number of times wrong: 2
+Correct answer:        declaration of counter, assignment, condition check, runs internal code if true, increments, condition check, repeat
+Wrong answers given:   [Declaration, declaration, assignment, condition check, iteration, execute internal code, condition check, repeat]
+--------------------------------------------------
+
+Question 40 - "What is a for loop used for?"
+Number of times wrong: 2
+Correct answer:        To access values via index
+Wrong answers given:   [to, to run an unknown number of loops, checks condition after each looop]
+--------------------------------------------------
+
+Question 41 - "What is a do-while loop used for?"
+Number of times wrong: 2
+Correct answer:        To execute code at least once
+Wrong answers given:   [to loop the code at least once, to execute the code at least once]
+--------------------------------------------------
+
+Question 42 - "Which operator used in a for loop condition causes a off-by-one error? (i ________ array.Length)"
+Number of times wrong: 1
+Correct answer:        <=
+Wrong answers given:   [>=]
+--------------------------------------------------
+
+Question 43 - "What does Big O notation measure in algorithms?"
+Number of times wrong: 1
+Correct answer:        Time and space complexity
+Wrong answers given:   []
+--------------------------------------------------
+
+Question 44 - "What is the Big O complexity of: for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { Console.Write(j); } }"
+Number of times wrong: 1
+Correct answer:        O(n^2)
+Wrong answers given:   [o(logn)]
+--------------------------------------------------
+
+Question 45 - "What Big O notation describes logarithmic time complexity?"
+Number of times wrong: 1
+Correct answer:        O(logN)
+Wrong answers given:   [o(log n)]
+--------------------------------------------------
+
+Question 46 - "What is the primary operational time complexity of finding the maximum value or checking for matching values inside an unsorted primitive array?"
+Number of times wrong: 1
+Correct answer:        O(n)
+Wrong answers given:   [o(n^2)]
+--------------------------------------------------
+
+Question 47 - "What is the Big O time complexity of accessing any single array element by index?"
+Number of times wrong: 1
+Correct answer:        O(1)
+Wrong answers given:   [o(n)]
+--------------------------------------------------
+
+Question 48 - "What type of datasets is linear search primarily used for because it requires no structural prerequisite?"
+Number of times wrong: 1
+Correct answer:        Unsorted
+Wrong answers given:   [binary]
+--------------------------------------------------
+
+Question 49 - "When does a for loop stop?"
+Number of times wrong: 1
+Correct answer:        When counter condition returns false
+Wrong answers given:   [when no elements are left]
 --------------------------------------------------
 

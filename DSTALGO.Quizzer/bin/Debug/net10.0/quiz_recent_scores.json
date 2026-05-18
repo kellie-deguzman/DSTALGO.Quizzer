@@ -1,4 +1,9 @@
 {
-  "basics": "82%",
-  "arrays": "79%"
+  "basics": "100%",
+  "arrays": "95%",
+  "bigonotation": "94%",
+  "search": "69%",
+  "coding": "79%",
+  "misc": "90%",
+  "randomized_mix": "82%"
 }

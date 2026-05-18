@@ -2,46 +2,71 @@
   {
     "questionText": "Given int[] age = new int[2] { 3, 5 };, swap both ages around. (3 lines of code)",
     "correctAnswer": "int temp = age[0]; age[0] = age[1]; age[1] = temp;",
-    "explanation": ""
+    "explanation": "Imagine each box as a glass of 2 different juices. You cannot swap the juices cleanly without a third, empty glass. (glass = juice;) You pour age[0] into the temp glass, pour age[1] into age[0], then pour age[0] from the temp glass into the age[1] glass."
   },
   {
     "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum. (4 lines of code)",
     "correctAnswer": "foreach (int i in age) { sum = sum + i; }",
-    "explanation": ""
+    "explanation": "In a FOR loop, i is the index and arr[i] is the value. In a FOREACH loop, i is the value. Foreach does not care about indices at all."
   },
   {
     "questionText": "What's a shorter way of writing sum = sum + i;?",
-    "correctAnswer": "sum += age[i];",
-    "explanation": ""
+    "correctAnswer": "sum += i;",
+    "explanation": "+= is a shorthand way of assigning a value to a variable by including itself in its own equation."
   },
   {
-    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, print the average. (1 line of code)",
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, print the average in the console. Assume sum has already been calculated as an integer. (1 line of code)",
     "correctAnswer": "Console.WriteLine((double)sum/age.Length);",
-    "explanation": ""
+    "explanation": "arr.Length is always an integer. Dividng 2 integers makes the machine throw the remainder decimals away. To fix this, we TYPE-CAST it by writing (dataType) before sum to convert it into a type that forces the machine to perform decimal division instead of integer division."
   },
   {
-    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the average. (1 line of code)",
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the average and assign it to a double variable. (1 line of code)",
     "correctAnswer": "double average = (double)sum / age.Length;",
     "explanation": ""
   },
   {
     "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest. (7 lines of code)",
-    "correctAnswer": "foreach (int i in age) { if (i > highest) { highest = i } }",
-    "explanation": ""
-  },
-  {
-    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest. (7 lines of code)",
-    "correctAnswer": "foreach (int i in age) { if (i > highest) { highest = i } }",
-    "explanation": ""
+    "correctAnswer": "int highest = age[0]; foreach (int i in age) { if (i > highest) { highest = i; } }",
+    "explanation": "Set highest to the first value. Loop through each element. For each, check if the current value inside is higher than the current value of highest (which starts at 0). If higher, make the current value the new highest. If not, do nothing. Repeat for the following elements."
   },
   {
     "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum of odd/even numbers. (10 lines of code)",
-    "correctAnswer": "foreach (int i in age) { if (i % 2 == 0) { sumEven = sumEven + i; } else { sumOdd = sumOdd + i; }",
-    "explanation": ""
+    "correctAnswer": "foreach (int i in age) { if (i % 2 == 0) { sumEven = sumEven + i; } else { sumOdd = sumOdd + i; } }",
+    "explanation": "Loop through each element. For each, check if the current value inside is cleanly divisble by 2. If yes, add its value to the current sumEven. If not, add its value to the current sumOdd. Repeat for the following elements."
   },
   {
     "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest of odd/even numbers. (10 lines of code)",
-    "correctAnswer": "foreach (int i in age) { if (i % 2 == 0) { if (i > highestEven) highestEven = i; } else { if (i > highestOdd) highestOdd = i; }",
-    "explanation": ""
+    "correctAnswer": "int highestEven = int.MinValue; int highestOdd = int.MinValue; foreach (int i in age) { if (i % 2 == 0) { if (i > highestEven) { highestEven = i; } }  else { if (i > highestOdd) { highestOdd = i; } } }",
+    "explanation": "Loop through each element. For each, check if the current value inside is cleanly divisible by 2. If yes, check if it is higher than the current highestEven. If yes, make it the new highestEven. If not, do nothing. If value is not divisible by 2, repeat checks but for highestOdd."
+  },
+  {
+    "questionText": "Given the array int[] dynamicCaps = { 10, 20, 30, 40 };, write a line of code to modify the index 2 and input 99 in its position.",
+    "correctAnswer": "dynamicCaps[2]=99;",
+    "explanation": "To reassign an element, target the array identifier with the bracketed index, followed by the assignment operator and the new value."
+  },
+  {
+    "questionText": "Given the array string[] nodes = { \"A\", \"B\", \"C\" };, write a line of code to modify the last index and input \"Z\" in its position.",
+    "correctAnswer": "nodes[2]=\"Z\";",
+    "explanation": "The length is 3, making the last index 2. Assigning a string literal requires matching double quotes."
+  },
+  {
+    "questionText": "Given the array double[] scores = { 1.5, 2.5, 3.5, 4.5 };, write a line of code to modify the first index and input 0.0 in its position.",
+    "correctAnswer": "scores[0]=0.0;",
+    "explanation": "The first index of any standard array is 0. We target scores[0] and assign the floating-point literal value 0.0."
+  },
+  {
+    "questionText": "Declare the array of integers named highscores containing { 150, 220, 310 } explicitly with a defined size tracking 3 elements.",
+    "correctAnswer": "int[]highscores=newint[3]{150,220,310};",
+    "explanation": "Declaring a fixed-size array inline with initialization values follows the syntax: type[] name = new type[size] { values }; whitespace is compressed for parser uniformity."
+  },
+  {
+    "questionText": "Declare the array of strings named menuOptions containing { \"Start\", \"Help\", \"Exit\" } explicitly with a defined size tracking 3 elements.",
+    "correctAnswer": "string[]menuOptions=newstring[3]{\"Start\",\"Help\",\"Exit\"};",
+    "explanation": "Explicit allocation format for a string array of exactly size 3 containing literal string items."
+  },
+  {
+    "questionText": "Declare the array of characters named vowels containing { 'a', 'e', 'i', 'o', 'u' } explicitly with a defined size tracking 5 elements.",
+    "correctAnswer": "char[]vowels=newchar[5]{'a','e','i','o','u'};",
+    "explanation": "Explicit allocation structure for a char array initializing exactly 5 character elements."
   }
 ]

@@ -15,7 +15,7 @@
     "explanation": ""
   },
   {
-    "questionText": "True or false: an array's size can be increased at runtime by appending more elements.",
+    "questionText": "[T/F] An array's size can be increased by appending more elements.",
     "correctAnswer": "False",
     "explanation": ""
   },
@@ -25,7 +25,7 @@
     "explanation": ""
   },
   {
-    "questionText": "________ matters in all arrays because elements are stored sequentially and accessed via zero-based indices.",
+    "questionText": "All array elements are stored sequentially so ________ matters.",
     "correctAnswer": "position",
     "explanation": ""
   },
@@ -71,7 +71,7 @@
   },
   {
     "questionText": "What is the address formula to find an array element?",
-    "correctAnswer": "address = base + index * elementSize",
+    "correctAnswer": "address = base + (index * elementSize)",
     "explanation": ""
   },
   {
@@ -101,16 +101,16 @@
   },
   {
     "questionText": "Given int[] a = { 85, 92, 78, 90 };, modify index 2 and input 1 into its position.",
-    "correctAnswer": "a[3] = 1;",
+    "correctAnswer": "a[2] = 1;",
     "explanation": ""
   },
   {
     "questionText": "a.Length - 1 implies that array length is always ________.",
-    "correctAnswer": "1 past the last array",
+    "correctAnswer": "1 past the last index",
     "explanation": ""
   },
   {
-    "questionText": "Create an array called \"a\" containing 10 slots filled with zeros.",
+    "questionText": "Create an array of integers called \"a\" containing 10 slots filled with zeros.",
     "correctAnswer": "int[] a = new int[10];",
     "explanation": ""
   },
@@ -130,7 +130,7 @@
     "explanation": ""
   },
   {
-    "questionText": "Which operator used in a for loop condition causes a off-by-one error? (i ________ array.Length)",
+    "questionText": "Which operator in a for loop condition causes an off-by-one error? (i ________ array.Length)",
     "correctAnswer": "<=",
     "explanation": ""
   },
@@ -140,8 +140,78 @@
     "explanation": ""
   },
   {
-    "questionText": "What loop reads every array element sequentially without using indices?",
-    "correctAnswer": "foreach",
+    "questionText": "Given int[] points = { 12, 45, 78, 23, 56, 89 }; what is the value of points[4]?",
+    "correctAnswer": "56",
     "explanation": ""
+  },
+  {
+    "questionText": "Given string[] inventory = { \"sword\", \"shield\", \"potion\", \"scroll\" }; what is the value of inventory[1]?",
+    "correctAnswer": "\"shield\"",
+    "explanation": "Arrays use 0-based indexing. inventory[0] is \"sword\" and inventory[1] is \"shield\"."
+  },
+  {
+    "questionText": "Given char[] grades = { 'A', 'B', 'C', 'D', 'F' }; what is the value of grades[0]?",
+    "correctAnswer": "'A'",
+    "explanation": "Arrays use 0-based indexing. The very first element at index 0 is 'A'."
+  },
+  {
+    "questionText": "Given double[] runtimes = { 4.5, 3.2, 5.1, 2.9, 6.0, 1.2 }; what is the last index of this array?",
+    "correctAnswer": "5",
+    "explanation": "The array contains 6 elements. Because indexing starts at 0, the last index is always Length - 1, which is 6 - 1 = 5."
+  },
+  {
+    "questionText": "Given int[] primeNumbers = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 }; what is the last index of this array?",
+    "correctAnswer": "9",
+    "explanation": "The array contains 10 elements. Since indexes range from 0 to Length - 1, the last valid index is 9."
+  },
+  {
+    "questionText": "Given string[] structuralModels = { \"Bakunawa\", \"Naga\", \"Minokawa\" }; what is the last index of this array?",
+    "correctAnswer": "2",
+    "explanation": "The array has a length of 3. Using 0-based indexing, the indexes are 0, 1, and 2. The last index is 2."
+  },
+  {
+    "questionText": "Given int[] trackingWeights = { 5, 10, 15, 20, 25, 30, 35 }; how many iterations does for (int i = 0; i < trackingWeights.Length; i++) run?",
+    "correctAnswer": "7",
+    "explanation": "The loop starts at i = 0 and terminates when i reaches trackingWeights.Length (7), processing indexes 0 through 6 for a total of 7 complete cycles."
+  },
+  {
+    "questionText": "Given string[] bufferPool = { \"sys\", \"usr\", \"bin\", \"temp\" }; how many iterations does for (int i = 0; i < bufferPool.Length; i++) run?",
+    "correctAnswer": "4",
+    "explanation": "The array has a length of 4. The loop runs for indexes 0, 1, 2, and 3, tracking exactly 4 iterations."
+  },
+  {
+    "questionText": "Given double[] metrics = { 1.1, 2.2 }; how many iterations does for (int i = 0; i < metrics.Length; i++) run?",
+    "correctAnswer": "2",
+    "explanation": "The loop runs once for index 0 and once for index 1, hitting exactly 2 iterations before failing the condition i < 2."
+  },
+  {
+    "questionText": "Given int[] collection = { 2, 4, 6, 8, 10, 12, 14, 16 }; how many iterations does for (int i = 0; i < collection.Length - 2; i++) run?",
+    "correctAnswer": "6",
+    "explanation": "The length of the array is 8. The loop condition is i < (8 - 2), which translates to i < 6. Starting from 0, it iterates for values 0, 1, 2, 3, 4, and 5."
+  },
+  {
+    "questionText": "Given int[] dataPoints = { 100, 200, 300, 400, 500 }; how many iterations does for (int i = 2; i < dataPoints.Length; i++) run?",
+    "correctAnswer": "3",
+    "explanation": "The initialization starts at i = 2. The loop runs while i < 5. This processes values for index 2, 3, and 4, executing exactly 3 iterations."
+  },
+  {
+    "questionText": "Given int[] sequences = { 1, 3, 5, 7, 9, 11 }; how many iterations does for (int i = 0; i <= 4; i++) run?",
+    "correctAnswer": "5",
+    "explanation": "The loop condition uses an inclusive less-than-or-equal operator (i <= 4). It evaluates successfully for values 0, 1, 2, 3, and 4, running exactly 5 times."
+  },
+  {
+    "questionText": "What is the last valid index of an array with a Length of 256?",
+    "correctAnswer": "255",
+    "explanation": "Because zero-based indexing is applied universally across arrays, the maximum valid index is always Length - 1."
+  },
+  {
+    "questionText": "What is the last valid index of an array with a Length of 1,000?",
+    "correctAnswer": "999",
+    "explanation": "The zero-based indexing range spans from 0 to Length - 1, mapping the last element to index 999."
+  },
+  {
+    "questionText": "What is the last valid index of an array with a Length of 8?",
+    "correctAnswer": "7",
+    "explanation": "An 8-element collection maps its items across the index keys 0, 1, 2, 3, 4, 5, 6, and 7."
   }
 ]

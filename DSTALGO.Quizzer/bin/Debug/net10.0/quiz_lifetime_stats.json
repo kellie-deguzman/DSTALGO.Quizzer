@@ -25,16 +25,18 @@
   },
   {
     "questionText": "How are algorithms and data structures connected?",
-    "timesWrong": 5,
+    "timesWrong": 7,
     "correctAnswer": "Algorithms use data structures to manage and process info",
     "wrongAnswers": [
       "data structures provide organized data for algorithms",
-      "algorithms use data structures"
+      "algorithms use data structures",
+      "algorithms use data structures to access and modify data",
+      "algorithms use data structions to manage and process info"
     ]
   },
   {
     "questionText": "Data structures are a way of ________ and ________ for ________",
-    "timesWrong": 4,
+    "timesWrong": 5,
     "correctAnswer": "organizing and storing data for efficient access and modification",
     "wrongAnswers": [
       "organizing data and ",
@@ -94,24 +96,26 @@
   },
   {
     "questionText": "What is a 1D array?",
-    "timesWrong": 1,
+    "timesWrong": 2,
     "correctAnswer": "A collection of homogeneous elements stored in contiguous memory locations",
     "wrongAnswers": []
   },
   {
     "questionText": "Given int[] a = { 85, 92, 78, 90 };, modify index 2 and input 1 into its position.",
-    "timesWrong": 1,
+    "timesWrong": 2,
     "correctAnswer": "a[3] = 1;",
     "wrongAnswers": [
-      "a[2] = 1"
+      "a[2] = 1",
+      "int[2] = 1;"
     ]
   },
   {
     "questionText": "Declare the array of grades { 8, 9, 11, 2 } with a defined size.",
-    "timesWrong": 1,
+    "timesWrong": 3,
     "correctAnswer": "int[] grades = new int[4];",
     "wrongAnswers": [
-      "int[] grades = { 8, 9, 11, 2 };"
+      "int[] grades = { 8, 9, 11, 2 };",
+      "int[] grades = {8,9,11,2}\r\n;"
     ]
   },
   {
@@ -120,6 +124,425 @@
     "correctAnswer": "int x = a[3];",
     "wrongAnswers": [
       "int x = arr[3];"
+    ]
+  },
+  {
+    "questionText": "What is space complexity?",
+    "timesWrong": 1,
+    "correctAnswer": "How much data will be processed",
+    "wrongAnswers": [
+      "how much data is being processed"
+    ]
+  },
+  {
+    "questionText": "What notation describes the execution time or space requirements of an algorithm?",
+    "timesWrong": 1,
+    "correctAnswer": "Big O",
+    "wrongAnswers": [
+      "big o notation"
+    ]
+  },
+  {
+    "questionText": "What is the Big O complexity of: for (int i = 1; i \u003C n; i *= 2) Console.WriteLine(i);",
+    "timesWrong": 2,
+    "correctAnswer": "O(log n)",
+    "wrongAnswers": [
+      "o(n)"
+    ]
+  },
+  {
+    "questionText": "What is the Big O complexity of: int sum = (n * (n \u002B 1)) / 2;",
+    "timesWrong": 1,
+    "correctAnswer": "O(1)",
+    "wrongAnswers": [
+      "o(n)"
+    ]
+  },
+  {
+    "questionText": "What is the Big O complexity of: while (n \u003E 1) n /= 2;",
+    "timesWrong": 1,
+    "correctAnswer": "O(log n)",
+    "wrongAnswers": [
+      "o(logn)"
+    ]
+  },
+  {
+    "questionText": "What is the Big O notation of binary search?",
+    "timesWrong": 2,
+    "correctAnswer": "O(logn)",
+    "wrongAnswers": [
+      "o(log n)"
+    ]
+  },
+  {
+    "questionText": "What type of search checks each element of an array sequentially from start to finish?",
+    "timesWrong": 1,
+    "correctAnswer": "Linear",
+    "wrongAnswers": [
+      "linear search"
+    ]
+  },
+  {
+    "questionText": "What mathematical formula is commonly used to find the midpoint index given a low index L and a high index H?",
+    "timesWrong": 1,
+    "correctAnswer": "(L\u002BH)/2",
+    "wrongAnswers": [
+      "(l \u002B h)"
+    ]
+  },
+  {
+    "questionText": "What does binary search do?",
+    "timesWrong": 5,
+    "correctAnswer": "Searches in middle then left and right based on result",
+    "wrongAnswers": [
+      "finds middle, searches in left or right based on result",
+      "searches the middle then left and right based on result",
+      "searches in middle then left or right based on result",
+      "Searches in middle, then left/right based on result",
+      "searches in middle element then left/right based on result"
+    ]
+  },
+  {
+    "questionText": "What does linear search do?",
+    "timesWrong": 4,
+    "correctAnswer": "Searches through every element 1 by 1",
+    "wrongAnswers": [
+      "searches 1 by 1",
+      "searches every element 1 by 1"
+    ]
+  },
+  {
+    "questionText": "What technique does binary search use to divide the search space in half during each step?",
+    "timesWrong": 1,
+    "correctAnswer": "Divide and conquer",
+    "wrongAnswers": [
+      "modulo division"
+    ]
+  },
+  {
+    "questionText": "If an array contains 1024 elements, what is the maximum number of comparisons a binary search requires?",
+    "timesWrong": 1,
+    "correctAnswer": "10",
+    "wrongAnswers": [
+      "2048"
+    ]
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest. (7 lines of code)",
+    "timesWrong": 8,
+    "correctAnswer": "foreach (int i in age) { if (i \u003E highest) { highest = i } }",
+    "wrongAnswers": [
+      "foreach",
+      "foreach (int i in age) { if (i \u003E highest) highest = i; }",
+      "foreach (int i in age)\r\n{\r\nif (i \u003E highest)\r\n{ highest = i; }\r\n}",
+      "highest = age[0];\r\nforeach (int i in age)\r\n{\r\n    if (i \u003E highest)\r\n    {\r\n        highest = i;\r\n    }\r\n}",
+      "int highest = age[0];\r\nforeach (int i in age);\r\n{\r\n    if (i \u003E highest)\r\n    {\r\n        highest = i;\r\n    }\r\n}"
+    ]
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the average. (1 line of code)",
+    "timesWrong": 2,
+    "correctAnswer": "double average = (double)sum / age.Length;",
+    "wrongAnswers": [
+      "Console.Write",
+      "double average = (double)sum/age.Length;"
+    ]
+  },
+  {
+    "questionText": "Given int[] age = new int[2] { 3, 5 };, swap both ages around. (3 lines of code)",
+    "timesWrong": 3,
+    "correctAnswer": "int temp = age[0]; age[0] = age[1]; age[1] = temp;",
+    "wrongAnswers": [
+      "temp = int[0]; int[0] = int[1]; int[1] = temp;",
+      "temp = age[0]; age[0] = age[1]; age[1] = temp;",
+      "temp = age[0];\r\nage[0] = age[1];\r\nage[1] = temp;"
+    ]
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum of odd/even numbers. (10 lines of code)",
+    "timesWrong": 8,
+    "correctAnswer": "foreach (int i in age) { if (i % 2 == 0) { sumEven = sumEven \u002B i; } else { sumOdd = sumOdd \u002B i; }",
+    "wrongAnswers": [
+      "for (int",
+      "foreach (int i in age)\r\n{\r\nif (i % 2 ==0)\r\n  {\r\n  sumEven = sumEven \u002B i;",
+      "foreach (int i in age)\r\n{\r\n    if (i % 2 == 0)\r\n        {\r\n        sumEven = sumEven \u002B i;\r\n        }\r\n        else\r\n        {\r\n        sumOdd = sumOdd \u002B i;\r\n        {\r\n}",
+      "foreach (int i in age)\r\n{\r\n    if (i % 2 == 0)\r\n    {\r\n        sumEven = sumEven \u002B i;\r\n    }\r\n    else\r\n    }\r\n        sumODd = sumOdd \u002B i;\r\n    }\r\n}",
+      "foreach (int i in age)\r\n{\r\n    if (i % 2 == 0)\r\n    {\r\n        sumEven = sumEven \u002B i;\r\n    }\r\n    eles\r\n    }\r\n        sumOdd = sumOdd \u002B i;\r\n    }\r\n}"
+    ]
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the highest of odd/even numbers. (10 lines of code)",
+    "timesWrong": 6,
+    "correctAnswer": "foreach (int i in age) { if (i % 2 == 0) { if (i \u003E highestEven) highestEven = i; } else { if (i \u003E highestOdd) highestOdd = i; }",
+    "wrongAnswers": [
+      "foreach (int i in age) { if (i % 2 == 0) { if (i \u003E highestEven) i = highestEven } else { if (i \u003E highestOdd) i = highestOdd } ",
+      "foreach (int i in age) { if (i % 2 == 0) { if (i \u003E highestEven) { highestEven = i; } } else { if (i \u003E highestOdd) { highestOdd = i; }",
+      "foreach (int i in age)\r\n{\r\nif (i % 2 == 0)\r\n{\r\nif (i \u003E highestEven) \r\n{ highestEven = i; }\r\n} else {\r\nif (i \u003E highestOdd)\r\n{ highestOdd = i; }\r\n}",
+      "int highestEven = age[0];\r\nint highestOdd = age[0];\r\nforeach (int i in age)\r\n{\r\nif (i % 2 == 0) \r\n{ if (i \u003E highestEven) { highestEven = i; } } else \r\n{ if (i \u003E highestOdd) { highestOdd = i; } }",
+      "highestEven = age[0];\r\nexit",
+      "highestEven = age[0];\r\nint highestOdd = age[0];"
+    ]
+  },
+  {
+    "questionText": "What\u0027s a shorter way of writing sum = sum \u002B i;?",
+    "timesWrong": 2,
+    "correctAnswer": "sum \u002B= age[i];",
+    "wrongAnswers": [
+      "sum \u002B= i;"
+    ]
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum. (4 lines of code)",
+    "timesWrong": 3,
+    "correctAnswer": "foreach (int i in age) { sum = sum \u002B i; }",
+    "wrongAnswers": [
+      "foreach (int i in age) { sum = sum \u002B age[i]; }",
+      "foreach (int i in age) { if (i \u003E sum) { sum = sum \u002B i; } }"
+    ]
+  },
+  {
+    "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, print the average. (1 line of code)",
+    "timesWrong": 1,
+    "correctAnswer": "Console.WriteLine((double)sum/age.Length);",
+    "wrongAnswers": [
+      "Console.WriteLine(sum/age.Length);"
+    ]
+  },
+  {
+    "questionText": "What is a foreach loop used for?",
+    "timesWrong": 3,
+    "correctAnswer": "To reference values directly",
+    "wrongAnswers": [
+      "to access values directly"
+    ]
+  },
+  {
+    "questionText": "What is a while loop used for?",
+    "timesWrong": 3,
+    "correctAnswer": "To loop an unknown number of times, checking condition before each loop",
+    "wrongAnswers": [
+      "to ",
+      "to run an unknown number of loops, checks conditions after each loop"
+    ]
+  },
+  {
+    "questionText": "A double equals sign (==)  ________.",
+    "timesWrong": 2,
+    "correctAnswer": "Asks yes/no",
+    "wrongAnswers": [
+      "checks if yes/no"
+    ]
+  },
+  {
+    "questionText": "Describe the flow of a for loop in terms of how a computer would read it. (7 steps)",
+    "timesWrong": 4,
+    "correctAnswer": "declaration of counter, assignment, condition check, runs internal code if true, increments, condition check, repeat",
+    "wrongAnswers": [
+      "Declaration",
+      "declaration, assignment, condition check, iteration, execute internal code, condition check, repeat",
+      "counter declaration, assignment, condition check, iteration, internal code, condition check, repeat",
+      "counter declaration, assignment, condition check, internal code if true, condition check, repeat"
+    ]
+  },
+  {
+    "questionText": "What is a for loop used for?",
+    "timesWrong": 3,
+    "correctAnswer": "To access values via index",
+    "wrongAnswers": [
+      "to",
+      "to run an unknown number of loops, checks condition after each looop",
+      "to reference values directly"
+    ]
+  },
+  {
+    "questionText": "What is a do-while loop used for?",
+    "timesWrong": 4,
+    "correctAnswer": "To execute code at least once",
+    "wrongAnswers": [
+      "to loop the code at least once",
+      "to execute the code at least once",
+      "to run code at least once",
+      "runs code at least once"
+    ]
+  },
+  {
+    "questionText": "Which operator used in a for loop condition causes a off-by-one error? (i ________ array.Length)",
+    "timesWrong": 1,
+    "correctAnswer": "\u003C=",
+    "wrongAnswers": [
+      "\u003E="
+    ]
+  },
+  {
+    "questionText": "What does Big O notation measure in algorithms?",
+    "timesWrong": 1,
+    "correctAnswer": "Time and space complexity",
+    "wrongAnswers": []
+  },
+  {
+    "questionText": "What is the Big O complexity of: for (int i = 0; i \u003C n; i\u002B\u002B) { for (int j = 0; j \u003C n; j\u002B\u002B) { Console.Write(j); } }",
+    "timesWrong": 1,
+    "correctAnswer": "O(n^2)",
+    "wrongAnswers": [
+      "o(logn)"
+    ]
+  },
+  {
+    "questionText": "What Big O notation describes logarithmic time complexity?",
+    "timesWrong": 1,
+    "correctAnswer": "O(logN)",
+    "wrongAnswers": [
+      "o(log n)"
+    ]
+  },
+  {
+    "questionText": "What is the primary operational time complexity of finding the maximum value or checking for matching values inside an unsorted primitive array?",
+    "timesWrong": 1,
+    "correctAnswer": "O(n)",
+    "wrongAnswers": [
+      "o(n^2)"
+    ]
+  },
+  {
+    "questionText": "What is the Big O time complexity of accessing any single array element by index?",
+    "timesWrong": 1,
+    "correctAnswer": "O(1)",
+    "wrongAnswers": [
+      "o(n)"
+    ]
+  },
+  {
+    "questionText": "What type of datasets is linear search primarily used for because it requires no structural prerequisite?",
+    "timesWrong": 1,
+    "correctAnswer": "Unsorted",
+    "wrongAnswers": [
+      "binary"
+    ]
+  },
+  {
+    "questionText": "When does a for loop stop?",
+    "timesWrong": 3,
+    "correctAnswer": "When counter condition returns false",
+    "wrongAnswers": [
+      "when no elements are left",
+      "when condition returns false"
+    ]
+  },
+  {
+    "questionText": "What is the time complexity of finding the max value or checking for matching values inside an unsorted array?",
+    "timesWrong": 1,
+    "correctAnswer": "O(n)",
+    "wrongAnswers": [
+      "o(1)"
+    ]
+  },
+  {
+    "questionText": "[T/F] An array is a flexible list of numbers.",
+    "timesWrong": 1,
+    "correctAnswer": "False",
+    "wrongAnswers": []
+  },
+  {
+    "questionText": "Which operator in a for loop condition causes an off-by-one error? (i ________ array.Length)",
+    "timesWrong": 1,
+    "correctAnswer": "\u003C=",
+    "wrongAnswers": [
+      "\u003E="
+    ]
+  },
+  {
+    "questionText": "When does a foreach loop stop?",
+    "timesWrong": 2,
+    "correctAnswer": "When no elements are left",
+    "wrongAnswers": [
+      "when no elements left"
+    ]
+  },
+  {
+    "questionText": "5 % 3 = ?",
+    "timesWrong": 1,
+    "correctAnswer": "2",
+    "wrongAnswers": [
+      "1"
+    ]
+  },
+  {
+    "questionText": "a.Length - 1 implies that array length is always ________.",
+    "timesWrong": 1,
+    "correctAnswer": "1 past the last index",
+    "wrongAnswers": [
+      "1 past the last element"
+    ]
+  },
+  {
+    "questionText": "Given int[] collection = { 2, 4, 6, 8, 10, 12, 14, 16 }; how many iterations does for (int i = 0; i \u003C collection.Length - 2; i\u002B\u002B) run?",
+    "timesWrong": 1,
+    "correctAnswer": "6",
+    "wrongAnswers": [
+      "8"
+    ]
+  },
+  {
+    "questionText": "In an algorithm with O(n^2) complexity, if it takes 400 operations to process an input size of n = 20, how many operations will it take to process an input size of n = 40?",
+    "timesWrong": 1,
+    "correctAnswer": "1600",
+    "wrongAnswers": [
+      "80"
+    ]
+  },
+  {
+    "questionText": "In an algorithm with O(n^2) complexity, if it takes 90 operations to process an input size of n = 3, how many operations will it take to process an input size of n = 9?",
+    "timesWrong": 1,
+    "correctAnswer": "8100",
+    "wrongAnswers": [
+      "810"
+    ]
+  },
+  {
+    "questionText": "What is the maximum number of steps if we use binary search to search through a sorted dataset size of 50,000 elements?",
+    "timesWrong": 2,
+    "correctAnswer": "17",
+    "wrongAnswers": [
+      "15",
+      "15\r\n16"
+    ]
+  },
+  {
+    "questionText": "What is the maximum number of steps if we use binary search to search through a sorted dataset size of 4,000,000 elements?",
+    "timesWrong": 1,
+    "correctAnswer": "23",
+    "wrongAnswers": [
+      "22"
+    ]
+  },
+  {
+    "questionText": "Declare the array of integers named highscores containing { 150, 220, 310 } explicitly with a defined size tracking 3 elements.",
+    "timesWrong": 1,
+    "correctAnswer": "int[]highscores=newint[3]{150,220,310};",
+    "wrongAnswers": [
+      "int[] highscores = new int[3];"
+    ]
+  },
+  {
+    "questionText": "Declare the array of strings named menuOptions containing { \u0022Start\u0022, \u0022Help\u0022, \u0022Exit\u0022 } explicitly with a defined size tracking 3 elements.",
+    "timesWrong": 1,
+    "correctAnswer": "string[]menuOptions=newstring[3]{\u0022Start\u0022,\u0022Help\u0022,\u0022Exit\u0022};",
+    "wrongAnswers": [
+      "string[] menuOptions = [3]{\u0022start\u0022, \u0022help\u0022, \u0022exit\u0022};"
+    ]
+  },
+  {
+    "questionText": "5 % 2 = ?",
+    "timesWrong": 1,
+    "correctAnswer": "1",
+    "wrongAnswers": []
+  },
+  {
+    "questionText": "Using the integer binary search midpoint formula mid = l \u002B (h - l) / 2, what is the index midpoint given l = 0 and h = 9?",
+    "timesWrong": 1,
+    "correctAnswer": "4",
+    "wrongAnswers": [
+      "4.5"
     ]
   }
 ]

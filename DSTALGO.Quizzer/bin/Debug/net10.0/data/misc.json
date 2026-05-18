@@ -1,28 +1,48 @@
 [
   {
     "questionText": "Describe the flow of a for loop in terms of how a computer would read it. (7 steps)",
-    "correctAnswer": "declaration of counter, assignment, condition check, runs internal code if true, increments, condition check, repeat",
+    "correctAnswer": "counter declaration, assignment, condition check, internal code if true, increment, condition check, repeat",
     "explanation": ""
   },
   {
     "questionText": "What is a for loop used for?",
     "correctAnswer": "To access values via index",
-    "explanation": ""
+    "explanation": "For loops care about indices (index plural) A LOT. It asks for the boxes instead of the contents inside."
   },
   {
     "questionText": "What is a foreach loop used for?",
-    "correctAnswer": "To reference values directly",
-    "explanation": ""
+    "correctAnswer": "To access values directly",
+    "explanation": "Foreach loops does not care about indices (index plural) at all. It uses the values inside the boxes directly. It just asks for the next 'numbered box'."
   },
   {
     "questionText": "What is a while loop used for?",
-    "correctAnswer": "To loop an unknown number of times, checking condition before each loop",
-    "explanation": ""
+    "correctAnswer": "To loop an unknown number of times",
+    "explanation": "While loops don't care about counters or boxes, they wait for an event to happen or a continuous event to stop. e.g. Keep driving as long as gas is not empty. Keep exercising as long as water bottle is not empty."
   },
   {
     "questionText": "What is a do-while loop used for?",
-    "correctAnswer": "To execute code at least once",
+    "correctAnswer": "To run code at least once",
     "explanation": ""
+  },
+  {
+    "questionText": "When does a for loop stop?",
+    "correctAnswer": "When counter condition returns false",
+    "explanation": "for (initialization; condition; updation)"
+  },
+  {
+    "questionText": "When does a foreach loop stop?",
+    "correctAnswer": "When no elements left",
+    "explanation": "foreach (dataType item in arrayName)"
+  },
+  {
+    "questionText": "When does a while loop stop?",
+    "correctAnswer": "When pre-check condition returns false",
+    "explanation": "while (condition) {code, updation}"
+  },
+  {
+    "questionText": "When does a do-while loop stop?",
+    "correctAnswer": "When post-check condition returns false",
+    "explanation": "do {code, updation} while (condition)"
   },
   {
     "questionText": "A single equals sign (=) performs ________.",
@@ -48,5 +68,40 @@
     "questionText": "21 % 7 = ?",
     "correctAnswer": "0",
     "explanation": "Because 7 fits into 21 thrice, totalling 21"
+  },
+  {
+    "questionText": "What loop reads every array element sequentially without using indices?",
+    "correctAnswer": "foreach",
+    "explanation": "Foreach loops never have to manipulate index counters (i), a.k.a. indices."
+  },
+  {
+    "questionText": "What is the target memory address for arr[5] if the base address of the integer array is 2000 and each integer element takes exactly 4 bytes?",
+    "correctAnswer": "2020",
+    "explanation": "Calculated using the address formula: BaseAddress + (Index * ElementSize). Here, 2000 + (5 * 4) = 2000 + 20 = 2020."
+  },
+  {
+    "questionText": "What is the target memory address for arr[12] if the base address of the integer array is 4096 and each integer element takes exactly 4 bytes?",
+    "correctAnswer": "4144",
+    "explanation": "Calculated using the address formula: BaseAddress + (Index * ElementSize). Here, 4096 + (12 * 4) = 4096 + 48 = 4144."
+  },
+  {
+    "questionText": "What is the target memory address for arr[0] if the base address of the integer array is 8192 and each integer element takes exactly 4 bytes?",
+    "correctAnswer": "8192",
+    "explanation": "At index 0, the offset is 0 * 4 = 0 bytes. Therefore, the address matches the base memory address exactly."
+  },
+  {
+    "questionText": "Using the integer binary search midpoint formula mid = l + (h - l) / 2, what is the index midpoint given l = 0 and h = 9?",
+    "correctAnswer": "4",
+    "explanation": "Evaluating the mathematical sequence: 0 + (9 - 0) / 2 = 0 + 9 / 2 = 4.5. Since integer operations truncate decimals automatically, the result resolves to 4."
+  },
+  {
+    "questionText": "Using the integer binary search midpoint formula mid = l + (h - l) / 2, what is the index midpoint given l = 4 and h = 7?",
+    "correctAnswer": "5",
+    "explanation": "Evaluating the expressions inside out: 4 + (7 - 4) / 2 = 4 + 3 / 2 = 4 + 1 = 5. Integer division discards the remainder decimal value from 1.5."
+  },
+  {
+    "questionText": "Using the integer binary search midpoint formula mid = l + (h - l) / 2, what is the index midpoint given l = 10 and h = 20?",
+    "correctAnswer": "15",
+    "explanation": "Evaluating the formula step by step: 10 + (20 - 10) / 2 = 10 + 10 / 2 = 10 + 5 = 15."
   }
 ]

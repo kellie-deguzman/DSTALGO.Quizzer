@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text.Json;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DSTALGO.StudyGroup
 {
@@ -40,8 +42,6 @@ namespace DSTALGO.StudyGroup
                     }
                 }
 
-                // Programmatically sort topics to ensure requested ordering requirements:
-                // Basics -> First, Coding -> Second to last, Miscellaneous -> Dead last.
                 topics.Sort((x, y) =>
                 {
                     int GetSortWeight(string id)
@@ -50,7 +50,7 @@ namespace DSTALGO.StudyGroup
                         if (cleanId.Contains("basics")) return 1;
                         if (cleanId.Contains("coding")) return 98;
                         if (cleanId.Contains("miscellaneous") || cleanId.Contains("misc")) return 99;
-                        return 50; // Standard items rest safely in the middle ground
+                        return 50;
                     }
 
                     int weightX = GetSortWeight(x.topicId);
@@ -63,7 +63,6 @@ namespace DSTALGO.StudyGroup
 
             while (true)
             {
-                // Fetch latest version of recent scores history file on menu load
                 Dictionary<string, string> scoreHistory = LoadScoreHistory();
 
                 Console.Clear();
@@ -71,41 +70,83 @@ namespace DSTALGO.StudyGroup
                 Console.WriteLine("             DSTALGO QUIZ SYSTEM MENU             ");
                 Console.WriteLine("==================================================");
 
-                // Menu Width is exactly 50 characters to align flush against header borders
                 const int menuWidth = 50;
 
                 for (int i = 0; i < topics.Count; i++)
                 {
                     var topic = topics[i];
-                    string scoreSuffix = scoreHistory.ContainsKey(topic.topicId) ? $" ({scoreHistory[topic.topicId]})" : "";
-
                     string leftText = $"{i + 1}. {topic.displayName}";
-                    string rightText = $"({topic.totalQuestions} Qs){scoreSuffix}";
+                    string qCountText = $"({topic.totalQuestions} Qs)";
+                    string rawScore = scoreHistory.ContainsKey(topic.topicId) ? scoreHistory[topic.topicId] : null;
+                    string scoreSuffix = rawScore != null ? $" ({rawScore})" : "";
+
+                    string totalRightText = $"{qCountText}{scoreSuffix}";
                     int paddingNeeded = menuWidth - leftText.Length;
 
-                    if (paddingNeeded > rightText.Length)
+                    if (paddingNeeded > totalRightText.Length)
                     {
-                        Console.WriteLine($"{leftText}{rightText.PadLeft(paddingNeeded)}");
+                        Console.Write(leftText);
+                        Console.Write(qCountText.PadLeft(paddingNeeded));
+                        if (rawScore != null)
+                        {
+                            Console.Write(" (");
+                            SetPercentageColor(rawScore);
+                            Console.Write(rawScore);
+                            Console.ResetColor();
+                            Console.Write(")");
+                        }
+                        Console.WriteLine();
                     }
                     else
                     {
-                        Console.WriteLine($"{leftText} {rightText}");
+                        Console.Write($"{leftText} {qCountText}");
+                        if (rawScore != null)
+                        {
+                            Console.Write(" (");
+                            SetPercentageColor(rawScore);
+                            Console.Write(rawScore);
+                            Console.ResetColor();
+                            Console.Write(")");
+                        }
+                        Console.WriteLine();
                     }
                 }
 
-                // Format the Master Combined Pool Option to be flush right with history check
-                string mixSuffix = scoreHistory.ContainsKey("randomized_mix") ? $" ({scoreHistory["randomized_mix"]})" : "";
+                // Render Randomized Mix Option
                 string mixLeft = $"{topics.Count + 1}. RANDOMIZED MIX";
-                string mixRight = $"(All Topics Combined){mixSuffix}";
+                string mixCountText = "(All Topics Combined)";
+                string rawMixScore = scoreHistory.ContainsKey("randomized_mix") ? scoreHistory["randomized_mix"] : null;
+                string mixSuffix = rawMixScore != null ? $" ({rawMixScore})" : "";
+
+                string totalMixRightText = $"{mixCountText}{mixSuffix}";
                 int mixPadding = menuWidth - mixLeft.Length;
 
-                if (mixPadding > mixRight.Length)
+                if (mixPadding > totalMixRightText.Length)
                 {
-                    Console.WriteLine($"{mixLeft}{mixRight.PadLeft(mixPadding)}");
+                    Console.Write(mixLeft);
+                    Console.Write(mixCountText.PadLeft(mixPadding));
+                    if (rawMixScore != null)
+                    {
+                        Console.Write(" (");
+                        SetPercentageColor(rawMixScore);
+                        Console.Write(rawMixScore);
+                        Console.ResetColor();
+                        Console.Write(")");
+                    }
+                    Console.WriteLine();
                 }
                 else
                 {
-                    Console.WriteLine($"{mixLeft} {mixRight}");
+                    Console.Write($"{mixLeft} {mixCountText}");
+                    if (rawMixScore != null)
+                    {
+                        Console.Write(" (");
+                        SetPercentageColor(rawMixScore);
+                        Console.Write(rawMixScore);
+                        Console.ResetColor();
+                        Console.Write(")");
+                    }
+                    Console.WriteLine();
                 }
 
                 Console.WriteLine("Type 'exit' at any prompt to quit the application.");
@@ -118,6 +159,20 @@ namespace DSTALGO.StudyGroup
                 string menuCheck = selectionInput.Trim().ToLower();
                 if (menuCheck == "exit")
                 {
+                    string absoluteReportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "mistakes_report.txt");
+                    if (File.Exists(absoluteReportPath))
+                    {
+                        try
+                        {
+                            ProcessStartInfo startInfo = new ProcessStartInfo
+                            {
+                                FileName = absoluteReportPath,
+                                UseShellExecute = true
+                            };
+                            Process.Start(startInfo);
+                        }
+                        catch { }
+                    }
                     break;
                 }
 
@@ -148,6 +203,30 @@ namespace DSTALGO.StudyGroup
                     Console.WriteLine("Invalid entry. Press any key to try again...");
                     Console.ResetColor();
                     Console.ReadKey();
+                }
+            }
+        }
+
+        // Helper method to dynamically switch Console font colors depending on performance percentage threshold values
+        private static void SetPercentageColor(string percentageString)
+        {
+            if (string.IsNullOrWhiteSpace(percentageString)) return;
+
+            // Strip out non-numeric values (e.g. '%') to safely parse the score integer
+            string digitsOnly = Regex.Replace(percentageString, @"[^\d]", "");
+            if (int.TryParse(digitsOnly, out int score))
+            {
+                if (score >= 95)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+                else if (score >= 70)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
                 }
             }
         }
@@ -209,7 +288,6 @@ namespace DSTALGO.StudyGroup
             };
         }
 
-        // Constructor for Single Topic Execution
         public Quiz(QuizTopic targetTopic, string topicId)
         {
             InitializeOptions();
@@ -222,7 +300,6 @@ namespace DSTALGO.StudyGroup
             }
         }
 
-        // Constructor for Unified Global Mixed Pool Execution
         public Quiz(List<QuizTopic> allTopics, string topicId)
         {
             InitializeOptions();
@@ -264,12 +341,20 @@ namespace DSTALGO.StudyGroup
             {
                 Console.Clear();
                 Console.WriteLine($"{q.questionText}");
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("(Write code in multiple lines. Press ENTER twice on an empty line to submit)");
+                Console.ResetColor();
                 Console.Write("\n> ");
 
-                string userInput = Console.ReadLine();
-                if (userInput == null) continue;
+                StringBuilder inputBuilder = new StringBuilder();
+                string line;
+                while (!string.IsNullOrEmpty(line = Console.ReadLine()))
+                {
+                    inputBuilder.AppendLine(line);
+                }
 
-                string cleanInput = userInput.Trim().ToLower();
+                string rawUserInput = inputBuilder.ToString();
+                string cleanInput = CleanWhitespace(rawUserInput);
 
                 if (cleanInput == "exit")
                 {
@@ -277,7 +362,7 @@ namespace DSTALGO.StudyGroup
                 }
 
                 questionsAttempted++;
-                string cleanAnswer = q.correctAnswer.Trim().ToLower();
+                string cleanAnswer = CleanWhitespace(q.correctAnswer);
 
                 if (cleanInput == cleanAnswer)
                 {
@@ -291,68 +376,26 @@ namespace DSTALGO.StudyGroup
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("\nINCORRECT!");
                     Console.ResetColor();
-                    Console.WriteLine($"The correct answer is: {q.correctAnswer}");
+                    Console.WriteLine("The correct answer structure is:");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine(q.correctAnswer);
+                    Console.ResetColor();
 
                     MistakeLog log = new MistakeLog
                     {
                         questionText = q.questionText,
-                        userAnswer = userInput,
+                        userAnswer = rawUserInput.TrimEnd(),
                         correctAnswer = q.correctAnswer
                     };
                     mistakeReport.Add(log);
-
-                    // === INTEGRATED FEATURE: REWRITE CORRECTION 3 TIMES ===
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("\n[Reinforcement] You must type the correct answer 3 times in a row to proceed.");
-                    Console.ResetColor();
-
-                    int consecutiveCorrectStrikes = 0;
-                    bool exitTriggered = false;
-
-                    while (consecutiveCorrectStrikes < 3)
-                    {
-                        Console.Write($"[{consecutiveCorrectStrikes + 1}/3] Rewrite answer: ");
-                        string rewriteInput = Console.ReadLine();
-
-                        if (rewriteInput == null) continue;
-
-                        string cleanRewrite = rewriteInput.Trim().ToLower();
-
-                        if (cleanRewrite == "exit")
-                        {
-                            exitTriggered = true;
-                            break;
-                        }
-
-                        if (cleanRewrite == cleanAnswer)
-                        {
-                            consecutiveCorrectStrikes++;
-                        }
-                        else
-                        {
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
-                            Console.WriteLine($"-> Mistake made! Resetting counter. Match target text exactly: \"{q.correctAnswer}\"");
-                            Console.ResetColor();
-                            consecutiveCorrectStrikes = 0;
-                        }
-                    }
-
-                    if (exitTriggered)
-                    {
-                        break;
-                    }
-
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("-> Correction completed successfully.");
-                    Console.ResetColor();
                 }
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine("\nEXPLANATION:");
                 Console.ResetColor();
-                Console.WriteLine(q.explanation);
+                Console.WriteLine(string.IsNullOrWhiteSpace(q.explanation) ? "No dynamic explanation provided." : q.explanation);
 
-                Console.WriteLine("\nPress any key to continue (or type 'exit' at next question pointer)...");
+                Console.WriteLine("\nPress any key to continue...");
                 Console.ReadKey();
             }
 
@@ -363,7 +406,6 @@ namespace DSTALGO.StudyGroup
             Console.WriteLine($" Your final score: ({correctCount}/{questionsAttempted})  [Total pool size: {question.Count}]");
             Console.WriteLine("==================================================\n");
 
-            // Calculate and record recent history tracking parameters
             if (questionsAttempted > 0)
             {
                 double calculatedPercentage = ((double)correctCount / questionsAttempted) * 100;
@@ -380,9 +422,9 @@ namespace DSTALGO.StudyGroup
                     MistakeLog m = mistakeReport[i];
                     Console.WriteLine($"[{i + 1}] Question: {m.questionText}");
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"    Your Answer:    \"{m.userAnswer}\"");
+                    Console.WriteLine($"    Your Answer:\n{m.userAnswer}");
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"    Correct Answer: \"{m.correctAnswer}\"");
+                    Console.WriteLine($"    Correct Answer: {m.correctAnswer}");
                     Console.ResetColor();
                     Console.WriteLine(new string('-', 50));
                 }
@@ -400,6 +442,13 @@ namespace DSTALGO.StudyGroup
 
             Console.WriteLine("\nPress any key to return to the Main Menu.");
             Console.ReadKey();
+        }
+
+        private string CleanWhitespace(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return "";
+            string baseClean = input.Trim().ToLower();
+            return Regex.Replace(baseClean, @"\s+", "");
         }
 
         private void SaveRecentAttemptScore(string topicId, string percentageString)
@@ -484,7 +533,7 @@ namespace DSTALGO.StudyGroup
                 string updatedJson = JsonSerializer.Serialize(lifetimeDatabase, jsonOptions);
                 File.WriteAllText(hiddenJsonPath, updatedJson);
 
-                System.Text.StringBuilder reportBuilder = new System.Text.StringBuilder();
+                StringBuilder reportBuilder = new StringBuilder();
                 reportBuilder.AppendLine("==================================================");
                 reportBuilder.AppendLine("             LIFETIME MISTAKE REPORT              ");
                 reportBuilder.AppendLine("==================================================");
@@ -509,18 +558,11 @@ namespace DSTALGO.StudyGroup
 
                 string absoluteReportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "mistakes_report.txt");
 
-                using (StreamWriter writer = new StreamWriter(absoluteReportPath, false, System.Text.Encoding.UTF8))
+                using (StreamWriter writer = new StreamWriter(absoluteReportPath, false, Encoding.UTF8))
                 {
                     writer.Write(reportBuilder.ToString());
                     writer.Flush();
                 }
-
-                ProcessStartInfo startInfo = new ProcessStartInfo
-                {
-                    FileName = absoluteReportPath,
-                    UseShellExecute = true
-                };
-                Process.Start(startInfo);
             }
             catch (Exception ex)
             {

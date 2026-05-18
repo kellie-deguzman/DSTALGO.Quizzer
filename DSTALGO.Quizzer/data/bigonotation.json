@@ -1,73 +1,68 @@
 [
   {
-    "questionText": "What is the primary operational time complexity of finding the maximum value or checking for matching values inside an unsorted primitive array?",
+    "questionText": "What is the time complexity of finding the max value or checking for matching values inside an unsorted array?",
     "correctAnswer": "O(n)",
-    "explanation": ""
+    "explanation": "Both tasks require searching the entire collection in the worst case scenario so the number of operations scales 1:1."
   },
   {
     "questionText": "Which Big O Notation describes best case linear search?",
     "correctAnswer": "O(1)",
-    "explanation": ""
+    "explanation": "Best case scenario means that you find your target element in the FIRST box, only needing one loop. One loop will always take the same amount of time to execute so O(1) describes it best."
   },
   {
     "questionText": "Which Big O Notation describes average case linear search?",
     "correctAnswer": "O(n)",
-    "explanation": ""
+    "explanation": "The average linear search takes n/2 loops to find an element. We drop constants (1/2 in this case) in Big O notation so it's read as only o(n). A CONSTANT is any value that does not change when n changes (opposite of variables)."
   },
   {
     "questionText": "Which Big O Notation describes worst case linear search?",
     "correctAnswer": "O(n)",
-    "explanation": ""
+    "explanation": "Worst case scenario means that you search through your entire collection before finding your element. Any search that combs through a whole dataset scales 1:1 with the number of elements (n), resulting in o(n) notation.."
   },
   {
     "questionText": "What is the Big O notation of linear search?",
     "correctAnswer": "O(n)",
-    "explanation": ""
+    "explanation": "Industry standards always assume the worst-case to ensure no false-promises and realistic project mangement. We dont' consider the best-case scenario here because it isn't a guarantee. It's a bad idea to sell hopes and not 100% facts to superiors/stakeholders."
   },
   {
     "questionText": "What is the Big O notation of binary search?",
     "correctAnswer": "O(logn)",
-    "explanation": ""
+    "explanation": "O(logn) can refer to any algorithm that divides the remaining data in HALF with every step."
   },
   {
     "questionText": "What is the Big O complexity of: for (int i = 0; i < n; i++) Console.WriteLine(i);",
     "correctAnswer": "O(n)",
-    "explanation": ""
+    "explanation": "This loop scales 1:1 with input size (n). Scanning 10 elements takes 10 loops. Scanning 1000 elements takes 1000 loops. "
   },
   {
     "questionText": "What is the Big O complexity of: for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) x++;",
     "correctAnswer": "O(n^2)",
-    "explanation": ""
+    "explanation": "This is a for loop within a for loop. Loops within loops scale their operations quadratically, meaning they grow in proportion to the square of the input size (n)."
   },
   {
     "questionText": "What is the Big O complexity of: for (int i = 1; i < n; i *= 2) Console.WriteLine(i);",
-    "correctAnswer": "O(log n)",
-    "explanation": ""
+    "correctAnswer": "O(logn)",
+    "explanation": "O(logn) can refer to any algorithm whose counter gets multiplied isntead of added iteratively. (i *= 2, i *= 10). Whether you're dividing or multiplying by 2, the number of steps required is identical because multiplication and division are inverses of each other.'"
   },
   {
     "questionText": "What is the Big O complexity of: while (n > 1) n /= 2;",
-    "correctAnswer": "O(log n)",
-    "explanation": ""
+    "correctAnswer": "O(logn)",
+    "explanation": "This while loop divides n in HALF every step as long as n is bigger than 1. Once it gets divided to the point of being smaller, it will stop."
   },
   {
     "questionText": "What is the Big O complexity of: int val = arr[0];",
     "correctAnswer": "O(1)",
-    "explanation": ""
+    "explanation": "This is assignment. All assignments are done in constant time."
   },
   {
     "questionText": "What is the Big O complexity of: int sum = (n * (n + 1)) / 2;",
     "correctAnswer": "O(1)",
-    "explanation": ""
-  },
-  {
-    "questionText": "What is the Big O complexity of: for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { Console.Write(j); } }",
-    "correctAnswer": "O(n^2)",
-    "explanation": ""
+    "explanation": "While it does divide by 2, there are no loops, recursions, and no matter how big n is, the machine executes three math operations and one assignment. Ask yourself, does the amount of operations/loops change if the dataset gets bigger/smaller?"
   },
   {
     "questionText": "What is the Big O complexity of: int i = 0; while (i < n) { i++; }",
     "correctAnswer": "O(n)",
-    "explanation": ""
+    "explanation": "As long as the value of the current element (i) is less than the total number of elements (n). It loops exactly n times before it stops, making it linear."
   },
   {
     "questionText": "What notation describes the execution time or space requirements of an algorithm?",
@@ -75,7 +70,7 @@
     "explanation": ""
   },
   {
-    "questionText": "What is Big O notation primarily used to analyze and measure in algorithms?",
+    "questionText": "What does Big O notation measure in algorithms?",
     "correctAnswer": "Time and space complexity",
     "explanation": ""
   },
@@ -95,7 +90,7 @@
     "explanation": ""
   },
   {
-    "questionText": "What Big O notation represents an algorithm whose processing tiem always stays the same?",
+    "questionText": "What Big O notation represents an algorithm whose processing time always stays the same?",
     "correctAnswer": "O(1)",
     "explanation": ""
   },
@@ -111,7 +106,7 @@
   },
   {
     "questionText": "What Big O notation describes logarithmic time complexity?",
-    "correctAnswer": "O(logN)",
+    "correctAnswer": "O(logn)",
     "explanation": ""
   },
   {
@@ -122,6 +117,41 @@
   {
     "questionText": "If an O(N^2) algorithm performs 100 operations for N=10, how many operations will it perform for N=20?",
     "correctAnswer": "400",
-    "explanation": ""
+    "explanation": "In  o(n^2), (# operations = old n * growth factor^2). (gf = new n / original n). So (gf = 20 / 10 = 2). (# operations = 100 * (2^2) = 400)"
+  },
+  {
+    "questionText": "What does o(n) look like in C#?",
+    "correctAnswer": "loops",
+    "explanation": "In C#, this is typically a single standard loop (like a 'for' or 'while' loop) that iterates through a dataset from start to finish, scaling 1-to-1 with the input size."
+  },
+  {
+    "questionText": "What does o(1) look like in C#?",
+    "correctAnswer": "assignment",
+    "explanation": "This looks like direct variable assignments, basic math calculations, or accessing an array index. These operations take the exact same fraction of a second regardless of data size."
+  },
+  {
+    "questionText": "What does o(n^2) look like in C#?",
+    "correctAnswer": "loops in loops",
+    "explanation": "Because the inner loop must fully execute for every single turn of the outer loop, the operations multiply out to n squared."
+  },
+  {
+    "questionText": "What does o(logn) look like in C#?",
+    "correctAnswer": "division/multiplication",
+    "explanation": "When an algorithm repeatedly divides its remaining search pool in half (or multiplies its counter), allowing it to process massive datasets in a few steps."
+  },
+  {
+    "questionText": "In an algorithm with O(n^2) complexity, if it takes 400 operations to process an input size of n = 20, how many operations will it take to process an input size of n = 40?",
+    "correctAnswer": "1600",
+    "explanation": "# operations =  old # * (new n / old n)^2"
+  },
+  {
+    "questionText": "In an algorithm with O(n^2) complexity, if it takes 90 operations to process an input size of n = 3, how many operations will it take to process an input size of n = 9?",
+    "correctAnswer": "810",
+    "explanation": "# operations =  old # * (new n / old n)^2"
+  },
+  {
+    "questionText": " In an algorithm with O(n^2) complexity, if it takes 5,000 operations to process an input size of n = 50, how many operations will it take to process an input size of n = 250?",
+    "correctAnswer": "125000",
+    "explanation": "# operations =  old # * (new n / old n)^2"
   }
 ]

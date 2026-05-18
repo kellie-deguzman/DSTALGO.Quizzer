@@ -6,7 +6,7 @@
   },
   {
     "questionText": "What does binary search do?",
-    "correctAnswer": "Searches in middle then left and right based on result",
+    "correctAnswer": "Searches in middle then left/right based on result",
     "explanation": ""
   },
   {
@@ -22,7 +22,7 @@
   {
     "questionText": "What is the worst-case number of comparisons for a linear search on an array of size N?",
     "correctAnswer": "N",
-    "explanation": ""
+    "explanation": "In the worst-case scenario the target element is at the veeery end of the array. N is the total number of elements, so n also represents the last element."
   },
   {
     "questionText": "What search algorithm repeatedly divides a sorted search interval in half to locate an element?",
@@ -46,13 +46,22 @@
   },
   {
     "questionText": "What mathematical formula is commonly used to find the midpoint index given a low index L and a high index H?",
-    "correctAnswer": "(L+H)/2",
-    "explanation": ""
+    "correctAnswer": "l + (h - l)/2",
+    "explanation": "Imagine a hike where you're standing at marker l and your friend is standing at marker h. We subtract l from h to get the distance between the two boundaries. Divide that by 2 to get the distance to the middle. Add l to walk from l to the middle. We do not simply add and divide because that forces the machine to work with very big numbers (140 here, and that's bad!), this way, the highest number we ever work with is 100.'"
   },
   {
     "questionText": "If an array contains 1024 elements, what is the maximum number of comparisons a binary search requires?",
     "correctAnswer": "10",
-    "explanation": ""
+    "explanation": "In binary search, (2^maxSteps = n). 2^10 = 1024, so 10 is the max steps that binary search requires."
+  },
+  {
+    "questionText": "What is the maximum number of steps if we use binary search to search through a sorted dataset size of 50,000 elements?",
+    "correctAnswer": "16",
+    "explanation": "2^maxSteps = n"
+  },
+  {
+    "questionText": "What is the maximum number of steps if we use binary search to search through a sorted dataset size of 4,000,000 elements?",
+    "correctAnswer": "22",
+    "explanation": "2^maxSteps = n"
   }
-
 ]
