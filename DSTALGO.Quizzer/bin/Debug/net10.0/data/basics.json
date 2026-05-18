@@ -1,12 +1,12 @@
 [
   {
-    "questionText": "Algorithms are ________ that ________ or ________.",
+    "questionText": "Algorithms are ________ or ________ that ________ or ________.",
     "correctAnswer": "instructions or rules that solve a problem or perform a task",
     "explanation": ""
   },
   {
     "questionText": "Data structures are a way of ________ and ________ for ________",
-    "correctAnswer": "a way of organizing and storing data for efficient access and modification",
+    "correctAnswer": "storing and organizing data for efficient access and modification",
     "explanation": ""
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "questionText": "What is sorting in computer science?",
-    "correctAnswer": "Arranging data in order",
+    "correctAnswer": "Arranging elements in order",
     "explanation": ""
   },
   {

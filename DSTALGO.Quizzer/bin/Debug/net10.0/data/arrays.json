@@ -20,12 +20,12 @@
     "explanation": ""
   },
   {
-    "questionText": "Arrays can only hold elements of the same type, making them **.",
+    "questionText": "Arrays can only hold elements of the same type, making them ________.",
     "correctAnswer": "homogeneous",
     "explanation": ""
   },
   {
-    "questionText": "** matters in all arrays because elements are stored sequentially and accessed via zero-based indices.",
+    "questionText": "________ matters in all arrays because elements are stored sequentially and accessed via zero-based indices.",
     "correctAnswer": "position",
     "explanation": ""
   },
@@ -60,7 +60,7 @@
     "explanation": ""
   },
   {
-    "questionText": "What C# keyword or property returns the total number of slots in an array without parentheses?",
+    "questionText": "What C# keyword or property returns the total number of slots in an array?",
     "correctAnswer": "Length",
     "explanation": ""
   },
@@ -110,7 +110,7 @@
     "explanation": ""
   },
   {
-    "questionText": "Using standard array allocation syntax, write the minimal declaration statement for a fresh integer array containing 10 slots filled with zeros.",
+    "questionText": "Create an array containing 10 slots filled with zeros.",
     "correctAnswer": "int[] arr = new int[10];",
     "explanation": ""
   },
@@ -125,12 +125,12 @@
     "explanation": ""
   },
   {
-    "questionText": "What specific exception is thrown when attempting to read an index equal to an array's Length?",
+    "questionText": "What error shows up when you try to read an index equal to an array's Length?",
     "correctAnswer": "IndexOutOfRangeException",
     "explanation": ""
   },
   {
-    "questionText": "Which specific comparison operator used in a for loop condition causes a classic off-by-one error when running up to an array's Length?",
+    "questionText": "Which operator used in a for loop condition causes a off-by-one error? (i ________ array.Length)",
     "correctAnswer": "<=",
     "explanation": ""
   },
@@ -140,14 +140,8 @@
     "explanation": ""
   },
   {
-    "questionText": "What integer value is tracked and accumulated when implementing the classic array loop sum pattern?",
-    "correctAnswer": "total",
-    "explanation": ""
-  },
-  {
-    "questionText": "What specific alternative C# iteration keyword simplifies code when you want to read every array element sequentially without using indices?",
+    "questionText": "What loop reads every array element sequentially without using indices?",
     "correctAnswer": "foreach",
     "explanation": ""
   }
-
 ]

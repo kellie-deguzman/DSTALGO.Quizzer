@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\data\\arrays.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\data\\arrays.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\dstalgo.quizzer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\dstalgo.quizzer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\data\\basics.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\data\\basics.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\data\\coding.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\data\\coding.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\data\\misc.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\data\\misc.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\quiz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\data\\search.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -25,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\quiz-index.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\quiz-index.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\dstalgo.quizzer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\dstalgo.quizzer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|c:\\users\\winte\\source\\repos\\dstalgo.quizzer\\dstalgo.quizzer\\data\\misc.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B676F8D4-1DE0-5B92-053D-C99FDD1DF018}|DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj|solutionrelative:dstalgo.quizzer\\data\\misc.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +42,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "arrays.json",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\data\\arrays.json",
+              "RelativeDocumentMoniker": "DSTALGO.Quizzer\\data\\arrays.json",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\data\\arrays.json",
+              "RelativeToolTip": "DSTALGO.Quizzer\\data\\arrays.json",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-18T04:44:50.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "basics.json",
+              "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\data\\basics.json",
+              "RelativeDocumentMoniker": "DSTALGO.Quizzer\\data\\basics.json",
+              "ToolTip": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\data\\basics.json",
+              "RelativeToolTip": "DSTALGO.Quizzer\\data\\basics.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA0AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-18T04:02:04.075Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -51,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "misc.json",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\data\\misc.json",
               "RelativeDocumentMoniker": "DSTALGO.Quizzer\\data\\misc.json",
@@ -59,8 +93,7 @@
               "RelativeToolTip": "DSTALGO.Quizzer\\data\\misc.json",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-18T01:41:29.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T01:41:29.508Z"
             },
             {
               "$type": "Document",
@@ -83,33 +116,32 @@
               "RelativeDocumentMoniker": "DSTALGO.Quizzer\\quiz-index.json",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\quiz-index.json",
               "RelativeToolTip": "DSTALGO.Quizzer\\quiz-index.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-18T01:40:45.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DSTALGO.Quizzer",
+              "DocumentIndex": 6,
+              "Title": "DSTALGO.Quizzer.csproj",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj",
               "RelativeDocumentMoniker": "DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj",
               "RelativeToolTip": "DSTALGO.Quizzer\\DSTALGO.Quizzer.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-17T23:58:29.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-17T23:58:29.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Quiz.cs",
               "DocumentMoniker": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\Quiz.cs",
               "RelativeDocumentMoniker": "DSTALGO.Quizzer\\Quiz.cs",
               "ToolTip": "C:\\Users\\winte\\source\\repos\\DSTALGO.Quizzer\\DSTALGO.Quizzer\\Quiz.cs",
               "RelativeToolTip": "DSTALGO.Quizzer\\Quiz.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAUwCEAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAPMBAAAAAAAAAADwvwkCAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T23:45:47.36Z",
               "EditorCaption": ""

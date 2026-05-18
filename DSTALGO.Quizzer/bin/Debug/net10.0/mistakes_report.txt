@@ -1,0 +1,94 @@
+﻿==================================================
+             LIFETIME MISTAKE REPORT              
+==================================================
+
+Question 1 - "Which Big O Notation describes worst case linear search?"
+Number of times wrong: 1
+Correct answer:        O(n)
+Wrong answers given:   [o(1)]
+--------------------------------------------------
+
+Question 2 - "Arrays can only hold elements of the same type, making them ________."
+Number of times wrong: 1
+Correct answer:        homogeneous
+Wrong answers given:   [analogous]
+--------------------------------------------------
+
+Question 3 - "Contiguous memory is when ________."
+Number of times wrong: 1
+Correct answer:        Data is stored in one block
+Wrong answers given:   [memory is stored in blocks]
+--------------------------------------------------
+
+Question 4 - "How are algorithms and data structures connected?"
+Number of times wrong: 5
+Correct answer:        Algorithms use data structures to manage and process info
+Wrong answers given:   [data structures provide organized data for algorithms, algorithms use data structures]
+--------------------------------------------------
+
+Question 5 - "Data structures are a way of ________ and ________ for ________"
+Number of times wrong: 4
+Correct answer:        organizing and storing data for efficient access and modification
+Wrong answers given:   [organizing data and , storing and organizing data for , storing and organizing data for access and modification]
+--------------------------------------------------
+
+Question 6 - "Algorithms are ________ or ________ that ________ or ________."
+Number of times wrong: 2
+Correct answer:        instructions or rules that solve a problem or perform a task
+Wrong answers given:   [instructions or rules that , instructions or rules that solve problems or perform tasks]
+--------------------------------------------------
+
+Question 7 - "A linked list is ________ pointing to ________."
+Number of times wrong: 2
+Correct answer:        A collection of elements pointing to the next
+Wrong answers given:   [elements pointing to the next element, a collection of data pointing to the next]
+--------------------------------------------------
+
+Question 8 - "What is sorting in computer science?"
+Number of times wrong: 1
+Correct answer:        Arranging data in order
+Wrong answers given:   [reorganizing a collection of data]
+--------------------------------------------------
+
+Question 9 - "Linked lists live in ________ memory."
+Number of times wrong: 1
+Correct answer:        non-contiguous
+Wrong answers given:   [non-contiguous memory]
+--------------------------------------------------
+
+Question 10 - "What is an array?"
+Number of times wrong: 1
+Correct answer:        A row of numbered boxes
+Wrong answers given:   [list of numbers]
+--------------------------------------------------
+
+Question 11 - "What indexing system do arrays use to reference elements?"
+Number of times wrong: 1
+Correct answer:        Zero-based
+Wrong answers given:   [zero-base]
+--------------------------------------------------
+
+Question 12 - "What is a 1D array?"
+Number of times wrong: 1
+Correct answer:        A collection of homogeneous elements stored in contiguous memory locations
+Wrong answers given:   []
+--------------------------------------------------
+
+Question 13 - "Given int[] a = { 85, 92, 78, 90 };, modify index 2 and input 1 into its position."
+Number of times wrong: 1
+Correct answer:        a[3] = 1;
+Wrong answers given:   [a[2] = 1]
+--------------------------------------------------
+
+Question 14 - "Declare the array of grades { 8, 9, 11, 2 } with a defined size."
+Number of times wrong: 1
+Correct answer:        int[] grades = new int[4];
+Wrong answers given:   [int[] grades = { 8, 9, 11, 2 };]
+--------------------------------------------------
+
+Question 15 - "Given int[] a = { 85, 92, 78, 90 };, access index 3 and store in integer variable x."
+Number of times wrong: 1
+Correct answer:        int x = a[3];
+Wrong answers given:   [int x = arr[3];]
+--------------------------------------------------
+

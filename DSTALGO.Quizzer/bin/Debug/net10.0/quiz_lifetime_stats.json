@@ -1,1 +1,125 @@
-[{"QuestionText":"Which Big O Notation describes worst case linear search?","TimesWrong":1,"CorrectAnswer":"O(n)","WrongAnswers":["o(1)"]},{"QuestionText":"Arrays can only hold elements of the same type, making them ________.","TimesWrong":1,"CorrectAnswer":"homogeneous","WrongAnswers":["analogous"]}]
+[
+  {
+    "questionText": "Which Big O Notation describes worst case linear search?",
+    "timesWrong": 1,
+    "correctAnswer": "O(n)",
+    "wrongAnswers": [
+      "o(1)"
+    ]
+  },
+  {
+    "questionText": "Arrays can only hold elements of the same type, making them ________.",
+    "timesWrong": 1,
+    "correctAnswer": "homogeneous",
+    "wrongAnswers": [
+      "analogous"
+    ]
+  },
+  {
+    "questionText": "Contiguous memory is when ________.",
+    "timesWrong": 1,
+    "correctAnswer": "Data is stored in one block",
+    "wrongAnswers": [
+      "memory is stored in blocks"
+    ]
+  },
+  {
+    "questionText": "How are algorithms and data structures connected?",
+    "timesWrong": 5,
+    "correctAnswer": "Algorithms use data structures to manage and process info",
+    "wrongAnswers": [
+      "data structures provide organized data for algorithms",
+      "algorithms use data structures"
+    ]
+  },
+  {
+    "questionText": "Data structures are a way of ________ and ________ for ________",
+    "timesWrong": 4,
+    "correctAnswer": "organizing and storing data for efficient access and modification",
+    "wrongAnswers": [
+      "organizing data and ",
+      "storing and organizing data for ",
+      "storing and organizing data for access and modification"
+    ]
+  },
+  {
+    "questionText": "Algorithms are ________ or ________ that ________ or ________.",
+    "timesWrong": 2,
+    "correctAnswer": "instructions or rules that solve a problem or perform a task",
+    "wrongAnswers": [
+      "instructions or rules that ",
+      "instructions or rules that solve problems or perform tasks"
+    ]
+  },
+  {
+    "questionText": "A linked list is ________ pointing to ________.",
+    "timesWrong": 2,
+    "correctAnswer": "A collection of elements pointing to the next",
+    "wrongAnswers": [
+      "elements pointing to the next element",
+      "a collection of data pointing to the next"
+    ]
+  },
+  {
+    "questionText": "What is sorting in computer science?",
+    "timesWrong": 1,
+    "correctAnswer": "Arranging data in order",
+    "wrongAnswers": [
+      "reorganizing a collection of data"
+    ]
+  },
+  {
+    "questionText": "Linked lists live in ________ memory.",
+    "timesWrong": 1,
+    "correctAnswer": "non-contiguous",
+    "wrongAnswers": [
+      "non-contiguous memory"
+    ]
+  },
+  {
+    "questionText": "What is an array?",
+    "timesWrong": 1,
+    "correctAnswer": "A row of numbered boxes",
+    "wrongAnswers": [
+      "list of numbers"
+    ]
+  },
+  {
+    "questionText": "What indexing system do arrays use to reference elements?",
+    "timesWrong": 1,
+    "correctAnswer": "Zero-based",
+    "wrongAnswers": [
+      "zero-base"
+    ]
+  },
+  {
+    "questionText": "What is a 1D array?",
+    "timesWrong": 1,
+    "correctAnswer": "A collection of homogeneous elements stored in contiguous memory locations",
+    "wrongAnswers": []
+  },
+  {
+    "questionText": "Given int[] a = { 85, 92, 78, 90 };, modify index 2 and input 1 into its position.",
+    "timesWrong": 1,
+    "correctAnswer": "a[3] = 1;",
+    "wrongAnswers": [
+      "a[2] = 1"
+    ]
+  },
+  {
+    "questionText": "Declare the array of grades { 8, 9, 11, 2 } with a defined size.",
+    "timesWrong": 1,
+    "correctAnswer": "int[] grades = new int[4];",
+    "wrongAnswers": [
+      "int[] grades = { 8, 9, 11, 2 };"
+    ]
+  },
+  {
+    "questionText": "Given int[] a = { 85, 92, 78, 90 };, access index 3 and store in integer variable x.",
+    "timesWrong": 1,
+    "correctAnswer": "int x = a[3];",
+    "wrongAnswers": [
+      "int x = arr[3];"
+    ]
+  }
+]
