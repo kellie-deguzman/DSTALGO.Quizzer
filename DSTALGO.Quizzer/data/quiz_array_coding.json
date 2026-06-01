@@ -1,0 +1,27 @@
+[
+  {
+    "questionText": "In the Weather analysis program tracking multidimensional arrays, what library method checks the boundary count of the primary city row dimension? (Write the full condition checking if city variable is less than the boundary size of dimension 0 for 'weeklyTemperatures')",
+    "correctAnswer": "city < weeklyTemperatures.GetLength(0)",
+    "explanation": "GetLength(0) safely fetches structural tracking bounds belonging to the primary structural dimension index."
+  },
+  {
+    "questionText": "In the Weather tracking loop, write the conditional assignment block that identifies a new record-breaking maximum temperature. Check if 'currentTemp' is greater than 'hotestTemp' and update 'hotestTemp' to match.",
+    "correctAnswer": "if(currentTemp > hotestTemp){hotestTemp = currentTemp;}",
+    "explanation": "Standard check logic flags higher numeric instances instantly, replacing baseline tracking parameters."
+  },
+  {
+    "questionText": "Write a line of code initializing a jagged string array named 'classSections' containing exactly 4 uninstantiated row entries.",
+    "correctAnswer": "string[][] classSections = new string[4][];",
+    "explanation": "This establishes your top-level tracking boundary layout before individual internal lengths get configured."
+  },
+  {
+    "questionText": "Given a jagged array initialized as: string[][] classSections = new string[4][]; instantiate index 0 to contain an explicit list array with three names: \"Alice\", \"Bob\", and \"Charlie\".",
+    "correctAnswer": "classSections[0] = new string[] { \"Alice\", \"Bob\", \"Charlie\" };",
+    "explanation": "You assign raw initialization data directly onto target pointers within jagged parent tracks."
+  },
+  {
+    "questionText": "When traversing standard nested jagged arrays like 'municipalityBarangay', what syntax evaluates the precise inner length boundary of row index 'muni' inside your loop conditions?",
+    "correctAnswer": "municipalityBarangay[muni].Length",
+    "explanation": "Because rows scale independently, checking the unique row object length ensures proper safety boundaries without risk of throwing out-of-bounds index warnings."
+  }
+]

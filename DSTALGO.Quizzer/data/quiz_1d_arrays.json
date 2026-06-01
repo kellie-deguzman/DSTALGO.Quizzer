@@ -1,0 +1,22 @@
+[
+  {
+    "questionText": "What is the definition of a 1D array?",
+    "correctAnswer": "An ordered collection of elements of the same type",
+    "explanation": "A 1D array acts as a simple sequence tracking homogeneous data points using a single sequential indexing track."
+  },
+  {
+    "questionText": "How do you access a specific element inside a 1D array named 'array' at index 2?",
+    "correctAnswer": "array[2]",
+    "explanation": "Standard 1D indexing relies on simple singular square bracket access patterns."
+  },
+  {
+    "questionText": "Provide an example declaration of an integer array named 'array' containing explicitly assigned values 1, 2, and 3 without specifying an explicit size constraint.",
+    "correctAnswer": "int[] array = {1, 2, 3};",
+    "explanation": "If you have the initialization values ready, you don't bother declaring the size; the compiler automatically scales it."
+  },
+  {
+    "questionText": "What are two common application use cases for 1D arrays?",
+    "correctAnswer": "Lists of numbers, names",
+    "explanation": "Linear data maps cleanly to collections tracking standard flat records like lists of sequential indices or uniform string titles."
+  }
+]

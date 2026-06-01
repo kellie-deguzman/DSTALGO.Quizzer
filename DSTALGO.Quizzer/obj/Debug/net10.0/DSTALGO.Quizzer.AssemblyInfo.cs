@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DSTALGO.Quizzer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcbbbc1ee40d2487b5679d7601c05938d139347e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67a17b862f90a1f2d11f1d88e5b72faf03acc451")]
 [assembly: System.Reflection.AssemblyProductAttribute("DSTALGO.Quizzer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DSTALGO.Quizzer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

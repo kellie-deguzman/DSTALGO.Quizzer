@@ -47,9 +47,18 @@ namespace DSTALGO.StudyGroup
                     int GetSortWeight(string id)
                     {
                         string cleanId = id.ToLower().Trim();
+
+                        // 1. Core fundamentals first
                         if (cleanId.Contains("basics")) return 1;
+
+                        // 2. Middle tiers sorted sequentially
+                        if (cleanId.Contains("multidimensional")) return 10;
+                        if (cleanId.Contains("jagged")) return 20;
+
+                        // 3. Code implementations, exercises, and general items last
                         if (cleanId.Contains("coding")) return 98;
                         if (cleanId.Contains("miscellaneous") || cleanId.Contains("misc")) return 99;
+
                         return 50;
                     }
 

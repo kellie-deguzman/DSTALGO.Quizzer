@@ -1,0 +1,22 @@
+[
+  {
+    "questionText": "What is a jagged array?",
+    "correctAnswer": "An array of arrays with independent row lengths",
+    "explanation": "Jagged systems represent fluid collections where rows can scale flexibly to hold independent quantities of elements."
+  },
+  {
+    "questionText": "Write the signature notation defining a jagged integer array layout structure.",
+    "correctAnswer": "int[][]",
+    "explanation": "Double separate independent brackets mark standard jagged array tracking indicators."
+  },
+  {
+    "questionText": "What does a jagged array's outer array layer store?",
+    "correctAnswer": "references, not values",
+    "explanation": "The outer ring behaves as a tracking repository storing structural memory pointers to child structures rather than direct raw data properties."
+  },
+  {
+    "questionText": "What is required during programmatic loop construction to properly initialize inner sub-arrays within a jagged array?",
+    "correctAnswer": "Requires a secondary loop to initialize the inner arrays",
+    "explanation": "Because size boundaries differ per row, you must systematically crawl elements using child iterations to target memory segments."
+  }
+]

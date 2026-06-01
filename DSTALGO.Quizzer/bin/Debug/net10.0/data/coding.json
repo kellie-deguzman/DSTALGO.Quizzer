@@ -7,7 +7,7 @@
   {
     "questionText": "Given int[] age = new int[7] { 23,2,15,-10,11,13,4 };, find the sum. (4 lines of code)",
     "correctAnswer": "foreach (int i in age) { sum = sum + i; }",
-    "explanation": "i is the value inside the array element. age[i] is the index, the numbered box."
+    "explanation": "In a FOR loop, i is the index and arr[i] is the value. In a FOREACH loop, i is the value. Foreach does not care about indices at all."
   },
   {
     "questionText": "What's a shorter way of writing sum = sum + i;?",

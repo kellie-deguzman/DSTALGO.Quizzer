@@ -1,0 +1,42 @@
+[
+  {
+    "questionText": "What is the structural definition of multi-dimensional arrays?",
+    "correctAnswer": "Arrays within arrays, of unbroken rows and columns",
+    "explanation": "Multi-dimensional configurations represent rigid grid matrices containing shared, rectangular dimensions across rows and columns."
+  },
+  {
+    "questionText": "True or False: Multi-dimensional arrays are flexible, meaning rows can hold varying column quantities.",
+    "correctAnswer": "False",
+    "explanation": "Multi-dimensional arrays are strictly rigid. Every single row is bounded to the exact same column count."
+  },
+  {
+    "questionText": "Write the C# syntax used to initialize a two-dimensional integer array type layout.",
+    "correctAnswer": "int[,]",
+    "explanation": "A singular comma inside brackets allocates a 2D rectangular structural layout."
+  },
+  {
+    "questionText": "Write the C# syntax used to initialize a three-dimensional integer array type layout.",
+    "correctAnswer": "int[,,]",
+    "explanation": "Using two commas establishes a 3D structural mapping space across depth properties."
+  },
+  {
+    "questionText": "Declare a 3D integer array named 'spaceArray' allocated dynamically with dimensions 3, 4, and 2.",
+    "correctAnswer": "int[,,] spaceArray = new int[3, 4, 2];",
+    "explanation": "Instantiates the multi-dimensional tracking grid size immediately across three specific structural limits."
+  },
+  {
+    "questionText": "Given a 3D array named 'spaceArray', write the code block to extract a coordinate value located at depth 1, row 2, column 1, storing it inside a new integer variable called 'value'.",
+    "correctAnswer": "int value = spaceArray[1, 2, 1];",
+    "explanation": "3D array syntax utilizes multi-dimensional indexing without nested individual brackets."
+  },
+  {
+    "questionText": "Given a 3D array named 'spaceArray', write a line of code to set the item value at coordinate (1, 2, 1) directly to 10.",
+    "correctAnswer": "spaceArray[1, 2, 1] = 10;",
+    "explanation": "Assigning changes the precise point across multi-dimensional indices directly."
+  },
+  {
+    "questionText": "What are three common system uses for 3D array layouts?",
+    "correctAnswer": "3D graphics, physics simulations, medical imaging",
+    "explanation": "3D arrays help render clear coordinate systems such as structural vertices, spatial grids, or volume layouts."
+  }
+]

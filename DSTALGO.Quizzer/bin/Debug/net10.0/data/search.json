@@ -61,7 +61,7 @@
   },
   {
     "questionText": "What is the maximum number of steps if we use binary search to search through a sorted dataset size of 4,000,000 elements?",
-    "correctAnswer": "23",
+    "correctAnswer": "22",
     "explanation": "2^maxSteps = n"
   }
 ]
